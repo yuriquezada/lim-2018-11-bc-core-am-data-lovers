@@ -1,5 +1,4 @@
 const arrKeys = Object.values(LOL.data);
-const parrafo = document.getElementById("campeones");
 
 //Recorrer y devuelve el URL del icono, el nombre y su título
 for (let i = 0; i < arrKeys.length; i++){
@@ -11,34 +10,22 @@ for (let i = 0; i < arrKeys.length; i++){
     console.log(imgChampions);
 };
 
-
-
-
-
-const containerList = document.getElementById("container-list");
-const crearTemplateDeCard = (data) => {
-    let templateListOfCards = '';
-    // recorremos nuestro array con forEach
-    data.forEach((LOL) => {
-      // creamos un template(string) por cada elemento del array
-      const card = `
-        <div class="card-link">
-          <article class="blog-card">
-            <img class="post-image" src="${ champions.img }" />
-            <div class="article-details">
-              <h4 class="post-category">${ champions.name }</h4>
-              <h3 class="post-title">${ champions.title }</h3>
-              <p>"Hola Mundo"</p>
-            </div>
-          </article>
-        </div>
-      `;
-      // vamos concatenando cada li 
-      templateListOfCards += card;
-    })
-    containerList.innerHTML = templateListOfCards;
-    crearTemplateDeCard(LOL);
-  };
-  // ejecuntado funciona para pintar la data en mi html
-  
-  
+const containerList=document.getElementById("container-list");
+const createTemplateCard = (list) => {
+  let templateListCard = '';
+  list.forEach((arrKeys)=>{
+    const card=`
+    <div class ="card-link">
+    <article class="blog-card">
+    <img class="post-image" src="${ arrKeys.img }" />
+    <div class="article-details">
+    <h1 class="post-name">${ arrKeys.name}</h1>
+    <h2 class="post-title"> ${ arrKeys.title}</h2>
+    </div>
+    </article>
+    </div>`;
+    templateListCard += card;
+  })
+  containerList.innerHTML=templateListCard
+};
+createTemplateCard(arrKeys);

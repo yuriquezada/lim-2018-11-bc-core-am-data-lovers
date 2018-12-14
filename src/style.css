@@ -1,2 +1,17 @@
-p{width: auto;
-height: auto;}
+.blog-card{
+    width: auto;
+    margin: 1%;
+    padding: 5px;
+    
+};
+.post-image{
+    display: flex;
+    justify-content: center;
+   
+}
+.post-name{
+    text-align: center;
+}
+.post-title{
+    text-align: center;
+}
