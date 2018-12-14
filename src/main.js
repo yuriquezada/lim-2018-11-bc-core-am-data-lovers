@@ -20,7 +20,7 @@ const createTemplateCard = (list) => {
     <img class="post-image" src="${ arrKeys.img }" />
     <div class="article-details">
     <h1 class="post-name">${ arrKeys.name}</h1>
-    <h2 class="post-title"> ${ arrKeys.title}</h2>
+    <h3 class="post-title"> ${ arrKeys.title}</h3>
     </div>
     </article>
     </div>`;

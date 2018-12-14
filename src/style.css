@@ -1,17 +1,60 @@
+body{
+    background-image: url("https://universe-meeps.leagueoflegends.com/v1/assets/images/factions/shadow-isles_splash.jpg");
+    background-attachment: fixed;
+    
+}
+body img{
+
+    width: 30%;
+    height: 20%;
+}
+.container-list{
+    width: 100%;
+    height: 100%;
+}
 .blog-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0a0c;
+    color: #f1e6d0;
+    border: 3px solid #937341;
+    border-radius: 4%;
+    overflow: hidden;
     width: auto;
     margin: 1%;
     padding: 5px;
-    
+    width: 7%;
+    height: 200px;
+    float: left;
 };
+.card-link {
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+.blog-card:hover{
+    transition: 0.4s;
+    background-color: #243741;
+    border: 3px solid #A68747;
+}
+}
 .post-image{
+    transition: opacity 0.3s;
     display: flex;
     justify-content: center;
-   
+    align-content: center;
+    width: 50%;
+    opacity: 0.8;
 }
+.post-image:hover{
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+
 .post-name{
     text-align: center;
 }
 .post-title{
     text-align: center;
+}
 }
