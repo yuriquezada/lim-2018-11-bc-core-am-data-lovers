@@ -1,24 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+
 body{
     background-image: url("https://universe-meeps.leagueoflegends.com/v1/assets/images/factions/shadow-isles_splash.jpg");
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+  
+section{
+    margin: auto;
+}
+
+.title-lol{
+    display: block;
+    margin-left: 32.5%;
+    margin-right: 32.5%;
+    width: 35%;
     
 }
-body img{
 
-    width: 30%;
-    height: 20%;
+.subtitle-lol{
+    text-align: center;
+    font-size: 300%;
+    margin: auto;
+    padding: 30px;
+    font-family: 'ZCOOL KuaiLe';
+    text-decoration: underline overline;
+    color: #896331;
+    background-color: rgb(31, 31, 31, 0.8)
 }
+
+.search-bar{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(217, 217, 219,0.5);
+    padding: 8px;
+}
+
+.champions-search{
+    width: 100%;
+    margin: 0 2%;
+}
+
+.search-champion{
+    width:85%;
+    border: 2px solid #896331;
+    border-radius: 5px;
+    outline:none;
+    resize: none;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe';
+    vertical-align: bottom;
+
+}
+
+.search-btn{
+    background-color: #937341;
+    border: 2px outset #896331;
+    font-family: 'ZCOOL KuaiLe';
+    font-size: 25px;
+    outline: none;
+    transition-duration:0.5s;
+    width: 10%;
+    height: 34px;
+    vertical-align: center;
+}
+.search-btn:hover{
+    transition: 0.3s ease;
+    font-weight: bold;
+    background-color: #A68747;
+    border: 2px outset #937341;
+}
+.search-btn:active{
+    box-shadow: 0 1px #101A1C;
+    transform: translateY(1px);
+}
+
+.checkbox-inline{
+    display: inline-flex;
+    margin: auto;
+}
+.checkbox-inline label{
+    font-family: 'ZCOOL KuaiLe';
+    font-weight: bold;
+    display: inline-block;
+}
+
+.champions-filter{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    justify-content: center;
+}
+
 .container-list{
     width: 100%;
     height: 100%;
 }
+
 .blog-card{
     display: flex;
     flex-direction: column;
-    background-color: #0a0a0c;
-    color: #f1e6d0;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-color: #131f26;
+    color: #896331;
+    opacity: 0.9;
     border: 3px solid #937341;
     border-radius: 4%;
+    font-family: 'ZCOOL KuaiLe';
     overflow: hidden;
     width: auto;
     margin: 1%;
@@ -26,35 +119,47 @@ body img{
     width: 7%;
     height: 200px;
     float: left;
-};
-.card-link {
-    margin-bottom: 6px;
-    text-decoration: none;
 }
+
 .blog-card:hover{
-    transition: 0.4s;
+    
     background-color: #243741;
     border: 3px solid #A68747;
+    opacity: 1;
+    transition: 0.3s ease;
+    cursor: pointer;
+    
 }
+.blog-card img{
+    display: block;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 30%;
+}
+
+.post-article{
+    height: 50%;
+    margin: auto;
+}
+
+.post-article{
+    height: 50%;
+    margin: auto;
 }
 .post-image{
-    transition: opacity 0.3s;
+    transition: 0.3s;
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 50%;
-    opacity: 0.8;
+    width: 50%;  
 }
-.post-image:hover{
-    transition: opacity 0.3s ease;
-    opacity: 1;
-}
-
-
 .post-name{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 .post-title{
     text-align: center;
-}
+
 }

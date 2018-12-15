@@ -6,13 +6,53 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="img/League-of-Legends-PNG-Clipart.png" alt="">
-    <h1>League of Legends</h1>
-   
-    <h2>List of Champions</h2>
-    <input type="search" id="my-search" name="q" placeholder="Buscar un Campeón" autocomplete="on">
-    <button id="search-champion">Buscar</button>
-    <div id="container-list" class="container-list"></div>
+    <section>
+      <img src="img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">  
+      <h2 class="subtitle-lol">List of Champions</h2>
+    </section>
+
+    <form class="search-bar">
+      <div id="champions-search" class="champions-search">
+       <input type="search" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on">
+       <button id="search-btn" class="search-btn">Buscar</button>
+      </div>      
+      <div id="champions-filter" class="champions-filter">
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="assassin">Assassin
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="fighter">Fighter
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="mage">Mage
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="marksman">Marksman
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="support">Support
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input class = "filter-champ" type="checkbox" value="tank">Tank
+          </label>
+        </div>
+      </div>
+    </form>
+
+    <section id="container-list" class="container-list"></section>
+    
+    
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
