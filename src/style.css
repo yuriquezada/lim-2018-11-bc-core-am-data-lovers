@@ -126,6 +126,7 @@ section{
     width: 8%;
     height: 200px;
     float: left;
+    outline:none;
 }
 
 .blog-card:hover{
@@ -137,6 +138,11 @@ section{
     cursor: pointer;
     
 }
+
+.blog-card:active{
+    transform: translateY(2px);
+}
+
 .blog-card img{
     display: block;
     margin-left: 30%;

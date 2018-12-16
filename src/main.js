@@ -7,19 +7,21 @@ const createTemplateCard = (list) => {
   list.forEach((arrKeys)=>{
     const card=`
     <div class ="card-link">
-    <article class="blog-card">
+    <button class="blog-card">
     <img class="post-image" src="${ arrKeys.img }" />
     <div class="article-details">
     <h1 class="post-name">${ arrKeys.name}</h1>
     <h3 class="post-title"> ${ arrKeys.title}</h3>
     </div>
-    </article>
+    </button>
     </div>`;
     templateListCard += card;
   })
   containerList.innerHTML=templateListCard
 };
 createTemplateCard(arrKeys);
+
+
 
 //Recorrer y devuelve el URL del icono, el nombre y su título
 for (let i = 0; i < arrKeys.length; i++){
