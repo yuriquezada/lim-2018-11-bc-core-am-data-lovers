@@ -1,15 +1,6 @@
 const arrKeys = Object.values(LOL.data);
 
-//Recorrer y devuelve el URL del icono, el nombre y su título
-for (let i = 0; i < arrKeys.length; i++){
-    //const arr = [];
-    const champions = arrKeys[i];
-    const imgChampions = (`${champions.img} ${champions.name} ${champions.title} </br>`);
-    //arr[i] = imgChampions;
-    // document.write(imgChampions);
-    console.log(imgChampions);
-};
-
+//Recorre la data y plasma en el html img, name y title
 const containerList=document.getElementById("container-list");
 const createTemplateCard = (list) => {
   let templateListCard = '';
@@ -29,3 +20,27 @@ const createTemplateCard = (list) => {
   containerList.innerHTML=templateListCard
 };
 createTemplateCard(arrKeys);
+
+//Recorrer y devuelve el URL del icono, el nombre y su título
+for (let i = 0; i < arrKeys.length; i++){
+    //const arr = [];
+    const champions = arrKeys[i];
+    const imgChampions = (`${champions.img} ${champions.name} ${champions.title} </br>`);
+    //arr[i] = imgChampions;
+    // document.write(imgChampions);
+    console.log(imgChampions);
+};
+
+
+//filtrado
+
+const resultFighter = arrKeys.filter(function (data) {
+
+    return data.tags.includes('Support')===true;
+
+});
+console.log(resultFighter);
+
+
+//Buscador 
+

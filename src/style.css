@@ -31,10 +31,12 @@ section{
 }
 
 .search-bar{
+    width: 90%;
     border: none;
     border-radius: 5px;
     background-color: rgba(217, 217, 219,0.5);
     padding: 8px;
+    margin: 0 5%;
 }
 
 .champions-search{
@@ -65,6 +67,7 @@ section{
     width: 10%;
     height: 34px;
     vertical-align: center;
+    overflow: hidden;
 }
 .search-btn:hover{
     transition: 0.3s ease;
@@ -96,8 +99,12 @@ section{
 }
 
 .container-list{
-    width: 100%;
+    width: 90%;
     height: 100%;
+}
+
+.card-link{
+    width: 102%;
 }
 
 .blog-card{
@@ -116,7 +123,7 @@ section{
     width: auto;
     margin: 1%;
     padding: 5px;
-    width: 7%;
+    width: 8%;
     height: 200px;
     float: left;
 }
