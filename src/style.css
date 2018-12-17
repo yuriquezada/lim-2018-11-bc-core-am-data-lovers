@@ -39,6 +39,19 @@ section{
     margin: 0 5%;
 }
 
+.lol-filter{
+    border: 2px solid #896331;
+    font-family: 'ZCOOL KuaiLe';
+    margin: 2px;
+}
+
+.lol-sort{
+    border: 2px solid #896331;
+    font-family: 'ZCOOL KuaiLe';
+    padding: 2px;
+    margin:2px;
+}
+
 .champions-search{
     width: 100%;
     margin: 0 2%;
@@ -157,5 +170,17 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.post-title{
+    display: flex;
+    flex-direction: row;
+}
+.post-title img{
+    width:15px;
+    height: 15px;
+    opacity: 1;
+    display: block;
+
 }
 

@@ -24,7 +24,7 @@ const filterDataFunction = (data, dataFilter, condition) => {
   return newArrayFilter;
 };
 
-//Sort
+//Ordenar
 const sortDataFunction = (data, sortBy, sortOrder) => {
 
   let newArrayFilter = [];
@@ -33,28 +33,27 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
     newArrayFilter.push(Object.assign({}, data[i]));
  
   if (sortBy === 0) {
-    //Ordenas por ID
-    newArrayFilter.sort(
-      function (a, b) {
-        if (sortOrder === 0) return a.info.difficulty - b.info.difficulty;
-        else return b.info.difficulty - a.info.difficulty;
-      }
-    );
-  }
-  else {
-    //Ordenar por A-Z
+    //Ordenar por Alfabéticamente
     newArrayFilter.sort(
       function (a, b) {
         if (sortOrder === 0) {
           if (a.name > b.name) return 1;
-          else return -1;
+        else return -1;
         }
-        else {
+         else {
           if (a.name < b.name) return 1;
           else return -1;
         }
       }
     );
+  }
+  else{
+  //Ordenar por Dificultad
+  newArrayFilter.sort(
+    function (a, b) {
+      if (sortOrder === 0) return a.info.difficulty - b.info.difficulty;
+      else return b.info.difficulty - a.info.difficulty;
+    });
   }
   return newArrayFilter;
  };

@@ -1,5 +1,5 @@
 const arrKeys = Object.values(LOL.data);
-const sortBy = document.getElementById("lol-order");
+const sortBy = document.getElementById("lol-sort");
 const filtersByCategories = document.getElementById("lol-filter");
 const inputSearchText = document.getElementById('search-champion');
 const btnSearch = document.getElementById('search-btn');
@@ -18,7 +18,7 @@ const createTemplateCard = (list) => {
     <div class="article-details">
     <h1 class="post-name">${ arrKeys.name}</h1>
     <h3 class="post-title"> ${ arrKeys.title}</h3>
-    <h3 class="post-title"> ${ arrKeys.info.difficulty}</h3>
+    <h3 class="post-title"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ arrKeys.info.difficulty}</h3>
 
     </div>
     </button>
@@ -37,15 +37,6 @@ const abc = document.getElementById('2');
 abc.addEventListener('click', function(){console.log('hola')});
 
 
-// //Recorrer y devuelve el URL del icono, el nombre y su título
-// for (let i = 0; i < arrKeys.length; i++){
-//     //const arr = [];
-//     const champions = arrKeys[i];
-//     const imgChampions = (`${champions.img} ${champions.name} ${champions.title} </br>`);
-//     //arr[i] = imgChampions;
-//     // document.write(imgChampions);
-//     
-// };
 
 
 //filtrado

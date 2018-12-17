@@ -8,23 +8,28 @@
   <body>
     <section>
       <img src="img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">  
+
       <h2 class="subtitle-lol">List of Champions</h2>
     </section>
 
     <form class="search-bar">
       <div id="champions-search" class="champions-search">
-        <select id="lol-filter">
+        <select id="lol-filter" class="lol-filter">
         <option value="0">Nombre</option>
         </select>
-        <select id="lol-order" name="OS" class="options-of-filters">
-            <option value="00">DIFICULTAD ASC</option>
-            <option value="01">DIFCULTAD DESC</option>
-            <option value="10">A-Z</option>
-            <option value="11">Z-A</option>
+
+        <select id="lol-sort" name="OS" class="lol-sort">
+          <option value="00">A-Z</option>
+          <option value="01">Z-A</option>  
+          <option value="10">DIFICULTAD ASC</option>
+          <option value="11">DIFCULTAD DESC</option>
         </select>
-       <input type="text" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on" value="">
-       <button id="search-btn" class="search-btn" type="button">Buscar</button>
-      </div>      
+
+        <input type="text" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on" value="">
+       
+        <button id="search-btn" class="search-btn" type="button">Buscar</button>
+      </div>  
+
       <div id="champions-filter" class="champions-filter">
         <div class="checkbox-inline">
           <label>
