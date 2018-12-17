@@ -34,9 +34,10 @@ Los usuarios a los que este proyecto va dirigido son aquellos jugadores de video
 ### **2. Síntesis y Definición**
 ![sintesis-definicion](definicion.png)
 #### HISTORIAS DE USUARIO
-1.	Yo como usuario quiero poder ver las estadísticas de cada campeón de League of Legends para poder saber sus características particulares para poder saber cómo usarlos.
+1.  Yo como usuario quiero poder visualizar a todos los campeones con sus nombres e imágenes para poder diferenciarlos.
 2.	Yo como usuario quiero poder ver la dificultad de cada campeón de League of Legends para poder saber con cuál personaje comenzar a jugar.
 3.	Yo como usuario quiero poder filtrar a los campeones por sus roles para poder identificarlos y poder conocerlos.
+4.	Yo como usuario quiero poder ver las estadísticas de cada campeón de League of Legends para poder saber sus características particulares para poder saber cómo usarlos. 
 
 
 ### **3. Ideación**
