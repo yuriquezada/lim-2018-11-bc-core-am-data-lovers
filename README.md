@@ -28,11 +28,11 @@ necesita saber o ver exactamente; luego construimos una interfaz que le va ayuda
 
 ## Proceso de diseño
 ### **1. Descubrimiento e investigación**
-![descubrimiento-investigación](descubrimiento.png)
+![picture](src\img\Descubrimiento.png)
 Los usuarios a los que este proyecto va dirigido son aquellos jugadores de videojuegos (gamers) o personas que se inician en el mundo de “League of Legends” y quieren conocer más de los campeones con los que este MOBA (multiplayer online battle arena) se desarrolla. 
 
 ### **2. Síntesis y Definición**
-![sintesis-definicion](definicion.png)
+![picture](src\img\Definicion.png)
 #### HISTORIAS DE USUARIO
 1.  Yo como usuario quiero poder visualizar a todos los campeones con sus nombres e imágenes para poder diferenciarlos.
 2.	Yo como usuario quiero poder ver la dificultad de cada campeón de League of Legends para poder saber con cuál personaje comenzar a jugar.
@@ -41,12 +41,12 @@ Los usuarios a los que este proyecto va dirigido son aquellos jugadores de video
 
 
 ### **3. Ideación**
-![ideacion](ideacion.png)
+![picture](src\img\Ideacion.png)
 
 ### **4. Prototipado**
-![prototipado](prototipado.png)
+![picture](src\img\Prototipado.png)
 * #### Prototipo de baja fidelidad
 * #### Prototipo de alta fidelidad 
 
 ### **4. User Testing**
-![user-testing](testing.png)
+![picture](src\img\Testing.png)
