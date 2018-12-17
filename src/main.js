@@ -36,12 +36,29 @@ for (let i = 0; i < arrKeys.length; i++){
 
 //filtrado
 
-const resultFighter = arrKeys.filter(function (data) {
-
-    return data.tags.includes('Support')===true;
-
+const filterFighter = arrKeys.filter(function (data) {
+  return data.tags.includes('Fighter')===true;
 });
-console.log(resultFighter);
+
+const filterAssassin = arrKeys.filter(function(data){
+  return data.tags.includes('Assassin')===true;
+});
+
+const filterMage = arrKeys.filter(function(data){
+  return data.tags.includes('Mage')===true;
+});
+const filterMarksman = arrKeys.filter(function(data){
+  return data.tags.includes('Marksman')===true;
+});
+const filterSupport = arrKeys.filter(function(data){
+  return data.tags.includes('Support')===true;
+});
+const filterTank = arrKeys.filter(function(data){
+  return data.tags.includes('Tank')===true;
+});
+
+
+
 
 
 //Buscador 

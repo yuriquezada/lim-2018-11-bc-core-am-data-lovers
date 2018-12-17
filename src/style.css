@@ -123,10 +123,11 @@ section{
     width: auto;
     margin: 1%;
     padding: 5px;
-    width: 8%;
+    width: 10%;
     height: 200px;
     float: left;
     outline:none;
+    word-wrap: break-word;
 }
 
 .blog-card:hover{
@@ -144,35 +145,17 @@ section{
 }
 
 .blog-card img{
-    display: block;
+    display: flex;
     margin-left: 30%;
     margin-right: 30%;
     width: 40%;
     height: 30%;
 }
 
-.post-article{
-    height: 50%;
+.article-details{
     margin: auto;
-}
-
-.post-article{
-    height: 50%;
-    margin: auto;
-}
-.post-image{
-    transition: 0.3s;
     display: flex;
     justify-content: center;
-    align-content: center;
-    width: 50%;  
+    flex-direction: column;
 }
-.post-name{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.post-title{
-    text-align: center;
 
-}
