@@ -13,42 +13,52 @@
 
     <form class="search-bar">
       <div id="champions-search" class="champions-search">
-       <input type="search" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on" value="">
-       <button id="search-btn" class="search-btn">Buscar</button>
+        <select id="lol-filter">
+        <option value="0">Nombre</option>
+        </select>
+        <select id="lol-order" name="OS" class="options-of-filters">
+            <option value="00">DIFICULTAD ASC</option>
+            <option value="01">DIFCULTAD DESC</option>
+            <option value="10">A-Z</option>
+            <option value="11">Z-A</option>
+        </select>
+       <input type="text" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on" value="">
+       <button id="search-btn" class="search-btn" type="button">Buscar</button>
       </div>      
       <div id="champions-filter" class="champions-filter">
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Assassin">Assassin
+            <input class = "filter-champ" type="checkbox" id="assassin" value="Assassin">Assassin
           </label>
         </div>
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Fighter">Fighter
+            <input class = "filter-champ" type="checkbox" id="fighter"value="Fighter">Fighter
           </label>
         </div>
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Mage">Mage
+            <input class = "filter-champ" type="checkbox" id="mage" value="Mage">Mage
           </label>
         </div>
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Marksman">Marksman
+            <input class = "filter-champ" type="checkbox" id="marksman" value="Marksman">Marksman
           </label>
         </div>
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Support">Support
+            <input class = "filter-champ" type="checkbox" id="support" value="Support">Support
           </label>
         </div>
         <div class="checkbox-inline">
           <label>
-            <input class = "filter-champ" type="checkbox" value="Tank">Tank
+            <input class = "filter-champ" type="checkbox" id="tank" value="Tank">Tank
           </label>
         </div>
       </div>
     </form>
+
     <section id="container-list" class="container-list"></section>
     
     
