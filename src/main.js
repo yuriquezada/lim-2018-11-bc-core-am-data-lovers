@@ -1,17 +1,16 @@
 const arrKeys = Object.values(LOL.data);
-const sortBy = document.getElementById("lol-sort");
-const filtersByCategories = document.getElementById("lol-filter");
+const sortBy = document.getElementById('lol-sort');
+const filtersByCategories = document.getElementById('lol-filter');
 const inputSearchText = document.getElementById('search-champion');
 const btnSearch = document.getElementById('search-btn');
 
 
-
-//Recorre la data y plasma en el html img, name y title
-const containerList=document.getElementById("container-list");
+// Recorre la data y plasma en el html img, name y title
+const containerList = document.getElementById('container-list');
 const createTemplateCard = (list) => {
   let templateListCard = '';
-  list.forEach((arrKeys,index)=>{
-    const card=`
+  list.forEach((arrKeys, index) => {
+    const card = `
     <div class ="card-link">
     <button class="blog-card" id="${ index }">
     <img class="post-image" src="${ arrKeys.img }" />
@@ -24,31 +23,26 @@ const createTemplateCard = (list) => {
     </button>
     </div>`;
     templateListCard += card;
-
   })
-  containerList.innerHTML=templateListCard;
-  
+  containerList.innerHTML = templateListCard;
 };
 createTemplateCard(arrKeys);
 
 
 
-const abc = document.getElementById('2');
+const abc = document.getElementById('0');
 abc.addEventListener('click', function(){console.log('hola')});
 
-
-
-
-//filtrado
+// filtrado
 
 const assassin = document.getElementById('assassin');
 assassin.addEventListener('click', functionFilterAssassin);
-function functionFilterAssassin(){
-  const filterAssassin = arrKeys.filter(function(data){
+function functionFilterAssassin() {
+  const filterAssassin = arrKeys.filter(function(data) {
     return data.tags.includes('Assassin')===true;
   });
   console.log(filterAssassin);
-};
+}
 
 
 const fighter = document.getElementById('fighter');
