@@ -5,6 +5,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    text-align: center
 }
   
 section{
@@ -31,30 +32,24 @@ section{
 }
 
 .search-bar{
-    width: 90%;
     border: none;
     border-radius: 5px;
     background-color: rgba(217, 217, 219,0.5);
     padding: 8px;
-    margin: 0 5%;
+    width: 90%;
+    margin: auto
 }
 
-.lol-filter{
-    border: 2px solid #896331;
-    font-family: 'ZCOOL KuaiLe';
-    margin: 2px;
-}
-
-.lol-sort{
-    border: 2px solid #896331;
-    font-family: 'ZCOOL KuaiLe';
+.champions-sort, .champions-search, .champions-filter{
     padding: 2px;
-    margin:2pxñ;
+    justify-content: center;
+    border: none
 }
 
-.champions-search{
-    width: 100%;
-    margin: 0 2%;
+.lol-filter, .lol-sort{
+    border: 2px solid #896331;
+    font-family: 'ZCOOL KuaiLe';
+    padding: 2px
 }
 
 .search-champion{
@@ -63,10 +58,10 @@ section{
     border-radius: 5px;
     outline:none;
     resize: none;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'ZCOOL KuaiLe';
-    vertical-align: bottom;
+    padding: 5px
 
 }
 
@@ -77,9 +72,8 @@ section{
     font-size: 25px;
     outline: none;
     transition-duration:0.5s;
-    width: 10%;
+    width: 40px;
     height: 34px;
-    vertical-align: center;
     overflow: hidden;
 }
 .search-btn:hover{
@@ -95,21 +89,12 @@ section{
 
 .checkbox-inline{
     display: inline-flex;
-    margin: auto;
-}
-.checkbox-inline label{
+    margin: 5px;
     font-family: 'ZCOOL KuaiLe';
     font-weight: bold;
-    display: inline-block;
 }
 
-.champions-filter{
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    display: flex;
-    justify-content: center;
-}
+
 
 .container-list{
     width: 90%;
@@ -181,6 +166,19 @@ section{
     height: 15px;
     opacity: 1;
     display: block;
+}
+
+@media (max-width: 900px)
+{
+    .search-champion{
+        width:80%
+    }
 
 }
 
+@media (max-width: 650px)
+{
+    .search-champion{
+        width:70%
+    }
+}
