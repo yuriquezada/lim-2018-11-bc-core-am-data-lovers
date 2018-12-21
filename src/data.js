@@ -33,12 +33,12 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   if (sortBy === 0) {
     // Ordenar por Alfabéticamente
     newArrayFilter.sort(
-      function(a, b) {
+      function(ab, cd) {
         if (sortOrder === 0) {
-          if (a.name > b.name) return 1;
+          if (ab.name > cd.name) return 1;
           else return -1;
         } else {
-          if (a.name < b.name) return 1;
+          if (ab.name < cd.name) return 1;
           else return -1;
         }
       }
@@ -46,9 +46,9 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   } else {
   // Ordenar por Dificultad
     newArrayFilter.sort(
-      function(a, b) {
-        if (sortOrder === 0) return a.info.difficulty - b.info.difficulty;
-        else return b.info.difficulty - a.info.difficulty;
+      function(ab, cd) {
+        if (sortOrder === 0) return ab.info.difficulty - cd.info.difficulty;
+        else return cd.info.difficulty - ab.info.difficulty;
       });
   }
   return newArrayFilter;

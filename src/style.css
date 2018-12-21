@@ -121,6 +121,7 @@ section{
     float: left;
     outline:none;
     word-wrap: break-word;
+    text-decoration: none;
 }
 
 .blog-card:hover{
@@ -142,6 +143,7 @@ section{
     margin: auto;
     width: 40%;
     height: 30%;
+ 
 }
 
 .article-details{
@@ -154,12 +156,14 @@ section{
 .post-title{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .post-title img{
     width:15px;
     opacity: 1;
     padding: 0%;
-    margin: 0px
+    margin: auto 10px;
+
 }
 
 @media (max-width: 900px)

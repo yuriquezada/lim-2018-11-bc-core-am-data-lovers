@@ -1,4 +1,4 @@
-const arrKeys = Object.values(LOL.data);
+const arrKeys = Object.values(window.LOL.data);
 const sortBy = document.getElementById('lol-sort');
 const filtersByCategories = document.getElementById('lol-filter');
 const inputSearchText = document.getElementById('search-champion');
@@ -9,10 +9,10 @@ const btnSearch = document.getElementById('search-btn');
 const containerList = document.getElementById('container-list');
 const createTemplateCard = (list) => {
   let templateListCard = '';
-  list.forEach((arrKeys, index) => {
+  list.forEach((arrKeys) => {
     const card = `
     <div class ="card-link">
-    <a class="blog-card" id="${ index }" href="#open-modal">
+    <a class="blog-card" id="${ arrKeys.id }" href="#open-modal">
     <img class="post-image" src="${ arrKeys.img }" />
     <div class="article-details">
     <h1 class="post-name">${ arrKeys.name}</h1>
@@ -28,71 +28,66 @@ const createTemplateCard = (list) => {
 };
 createTemplateCard(arrKeys);
 
-const abc = document.getElementById('0');
-abc.addEventListener('click', function() {
-  console.log('hola');
-});
+// Filtrado
 
-// filtrado
-
-const assassin = document.getElementById('assassin');
-assassin.addEventListener('click', functionFilterAssassin);
-function functionFilterAssassin() {
-  const filterAssassin = arrKeys.filter(function(data) {
-    return data.tags.includes('Assassin') === true;
-  });
-  console.log(filterAssassin);
-}
+// const assassin = document.getElementById('assassin');
+// assassin.addEventListener('click', functionFilterAssassin);
+// function functionFilterAssassin() {
+//   const filterAssassin = arrKeys.filter(function(data) {
+//     return data.tags.includes('Assassin') === true;
+//   });
+//   console.log(filterAssassin);
+// }
 
 
-const fighter = document.getElementById('fighter');
-fighter.addEventListener('change', functionFilterFighter);
-function functionFilterFighter() {
-  const filterFighter = arrKeys.filter(function(data) {
-    return data.tags.includes('Fighter') === true;
-  });
-  console.log(filterFighter);
-}
+// const fighter = document.getElementById('fighter');
+// fighter.addEventListener('change', functionFilterFighter);
+// function functionFilterFighter() {
+//   const filterFighter = arrKeys.filter(function(data) {
+//     return data.tags.includes('Fighter') === true;
+//   });
+//   console.log(filterFighter);
+// }
 
 
-const mage = document.getElementById('mage');
-mage.addEventListener('click', functionFilterMage);
-function functionFilterMage() {
-  const filterMage = arrKeys.filter(function(data) {
-    return data.tags.includes('Mage') === true;
-  });
-  console.log(filterMage);
-}
+// const mage = document.getElementById('mage');
+// mage.addEventListener('click', functionFilterMage);
+// function functionFilterMage() {
+//   const filterMage = arrKeys.filter(function(data) {
+//     return data.tags.includes('Mage') === true;
+//   });
+//   console.log(filterMage);
+// }
 
 
-const marksman = document.getElementById('marksman');
-marksman.addEventListener('click', functionFilterMarksman);
-function functionFilterMarksman() {
-  const filterMarksman = arrKeys.filter(function(data) {
-    return data.tags.includes('Marksman') === true;
-  });
-  console.log(filterMarksman);
-}
+// const marksman = document.getElementById('marksman');
+// marksman.addEventListener('click', functionFilterMarksman);
+// function functionFilterMarksman() {
+//   const filterMarksman = arrKeys.filter(function(data) {
+//     return data.tags.includes('Marksman') === true;
+//   });
+//   console.log(filterMarksman);
+// }
 
 
-const support = document.getElementById('support');
-support.addEventListener('click', functionFilterSupport);
-function functionFilterSupport() {
-  const filterSupport = arrKeys.filter(function(data) {
-    return data.tags.includes('Support') === true;
-  });
-  console.log(filterSupport);
-}
+// const support = document.getElementById('support');
+// support.addEventListener('click', functionFilterSupport);
+// function functionFilterSupport() {
+//   const filterSupport = arrKeys.filter(function(data) {
+//     return data.tags.includes('Support') === true;
+//   });
+//   console.log(filterSupport);
+// }
 
 
-const tank = document.getElementById('tank');
-tank.addEventListener('click', functionFilterTank);
-function functionFilterTank() {
-  const filterTank = arrKeys.filter(function(data) {
-    return data.tags.includes('Tank') === true;
-  });
-  console.log(filterTank);
-}
+// const tank = document.getElementById('tank');
+// tank.addEventListener('click', functionFilterTank);
+// function functionFilterTank() {
+//   const filterTank = arrKeys.filter(function(data) {
+//     return data.tags.includes('Tank') === true;
+//   });
+//   console.log(filterTank);
+// }
 
 
 // Buscador 
@@ -100,9 +95,9 @@ function functionFilterTank() {
 const functionListenFilterOrder = () => {
   const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
   const listenFiltersByCategories = filtersByCategories.options[filtersByCategories.selectedIndex].value;
-  const arrayInputFilter = data.filterData(arrKeys, inputSearchText.value, parseInt(listenFiltersByCategories[0]));
+  const arrayInputFilter = window.data.filterData(arrKeys, inputSearchText.value, parseInt(listenFiltersByCategories[0]));
   
-  createTemplateCard(data.sortData(arrayInputFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
+  createTemplateCard(window.data.sortData(arrayInputFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
   return 1;
 };
 
