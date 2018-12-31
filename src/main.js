@@ -12,21 +12,51 @@ const createTemplateCard = (list) => {
   list.forEach((arrKeys) => {
     const card = `
     <div class ="card-link">
-    <a class="blog-card" id="${ arrKeys.id }" href="#open-modal">
-    <img class="post-image" src="${ arrKeys.img }" />
-    <div class="article-details">
-    <h1 class="post-name">${ arrKeys.name}</h1>
-    <h3 class="post-title"> ${ arrKeys.title}</h3>
-    <h3 class="post-title"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ arrKeys.info.difficulty}</h3>
-
-    </div>
-    </a>
+      <a class="blog-card" id="${ arrKeys.id }">
+      <img class="post-image" src="${ arrKeys.img }" />
+      <div class="article-details" >
+        <h1 class="post-name" id="${ arrKeys.id }">${ arrKeys.name} </h1>
+        <h3 class="post-title" id="${ arrKeys.id }"> ${ arrKeys.title}</h3>
+        <h3 class="post-title" id="${ arrKeys.id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ arrKeys.info.difficulty}</h3>
+      </div>
+      </a>
     </div>`;
-    templateListCard += card;
+    templateListCard += card;  
   });
   containerList.innerHTML = templateListCard;
 };
 createTemplateCard(arrKeys);
+
+// Recorre la data y plasma en el html una ventana modal
+
+/*const modal = document.getElementById('open-modal');
+const createModalWindow = (mod) => {
+  let modalWindow = '';
+  mod.forEach((arrKeys) => {
+    const card = `
+    <div class = "modal-content" id="${ arrKeys.id }">
+      <a href="#" title="Close" class="modal-close">X</a>
+      <img class="post-image" src="" />
+      <h1>${ arrKeys.name}</h1>
+      <h3>${ arrKeys.title}</h3>
+      <p>${ arrKeys.blurb}</p>
+      <p>${ arrKeys.tags}</p>
+    </div>`;
+    modalWindow += card;
+  });
+  modal.innerHTML = modalWindow;
+};
+createModalWindow(arrKeys);*/
+function myId(event) {
+  let x = event.target;
+  const capturedId = x.id;
+  return capturedId;
+}
+
+  for (let i=0; i < arrKeys.length;i++) {
+    console.log(arrKeys[i]);
+  }
+
 
 // Filtrado
 

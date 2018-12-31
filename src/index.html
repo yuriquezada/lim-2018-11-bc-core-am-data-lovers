@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-<body>
+<body onclick="myId(event)">
   <header>
     <img src="img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">
 
@@ -37,37 +37,30 @@
     </fieldset>
 
     <fieldset id="champions-filter" class="champions-filter">
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="assassin" value="Assassin">Assassin
       </label>
-
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="fighter" value="Fighter">Fighter
       </label>
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="mage" value="Mage">Mage
       </label>
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="marksman" value="Marksman">Marksman
       </label>
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="support" value="Support">Support
       </label>
-
       <label class="checkbox-inline">
         <input class="filter-champ" type="checkbox" id="tank" value="Tank">Tank
       </label>
     </fieldset>
   </form>
 
+  <section id="open-modal" class="modal-window"></section>
   <section id="container-list" class="container-list"></section>
-
-
+    
   <script src="./data/lol/lol.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
