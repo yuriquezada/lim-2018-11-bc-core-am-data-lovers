@@ -12,7 +12,7 @@ const createTemplateCard = (list) => {
   list.forEach((arrKeys) => {
     const card = `
     <div class ="card-link">
-      <a class="blog-card" id="${ arrKeys.id }">
+      <a class="blog-card" id="${ arrKeys.id }" href="#open-modal">
       <img class="post-image" src="${ arrKeys.img }" />
       <div class="article-details" >
         <h1 class="post-name" id="${ arrKeys.id }">${ arrKeys.name} </h1>
@@ -29,7 +29,7 @@ createTemplateCard(arrKeys);
 
 // Recorre la data y plasma en el html una ventana modal
 
-/*const modal = document.getElementById('open-modal');
+const modal = document.getElementById('open-modal');
 const createModalWindow = (mod) => {
   let modalWindow = '';
   mod.forEach((arrKeys) => {
@@ -46,7 +46,8 @@ const createModalWindow = (mod) => {
   });
   modal.innerHTML = modalWindow;
 };
-createModalWindow(arrKeys);*/
+createModalWindow(arrKeys);
+
 function myId(event) {
   let x = event.target;
   const capturedId = x.id;
