@@ -1,18 +1,15 @@
-// Filtrar
-//////////////FILTRADO///////////////////////////////////////////
+// Función para Filtrar
 const filterChamp = document.getElementsByClassName('filter-champ');
 const tagArray = Object.values(filterChamp);
-
 let choices = [];
 
 tagArray.forEach(tag => {
   tag.addEventListener('change', () => {
-    if (tag.checked == true) {
+    if (tag.checked === true) {
       choices.push(tag.value);
-    }
-    else {
-      x = choices.indexOf(tag.value);
-      choices.splice(x, 1)
+    } else {
+      const x = choices.indexOf(tag.value);
+      choices.splice(x, 1); 
       createTemplateCard(arrKeys);
     }
 
@@ -24,21 +21,19 @@ tagArray.forEach(tag => {
         } else {
           arregloTrueFalse.push(false);
         }
-        console.log(arregloTrueFalse);
       });
 
       if (arregloTrueFalse.includes(false)) {
         return false;
       } else {
-        console.log(data);
         return data;
       }
     }
     const arrKeysFilter = arrKeys.filter(porFavorDebesSalir);
 
-    createTemplateCard(arrKeysFilter)
-  })
-})
+    createTemplateCard(arrKeysFilter);
+  });
+});
 
 // Ordenar
 const sortDataFunction = (data, sortBy, sortOrder) => {
@@ -72,32 +67,36 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
 };
 
 // Buscador
-const filterDataFunction = (data, dataFilter, condition) => {
+const searchDataFunction = (data, dataSearch, condition) => {
   let dataCopy = [];
-  let arrayFilter = [];
-  let newArrayFilter = [];
+  let arraySearch = [];
+  let newArraySearch = [];
 
   for (let i = 0; i < data.length; i++)
     dataCopy.push(Object.assign({}, data[i]));
 
-  if (dataFilter.length === 0)
+  if (dataSearch.length === 0)
     return dataCopy;
 
   switch (condition) {   
   case 0:
     for (let i = 0; i < dataCopy.length; i++) {
-      arrayFilter.push(dataCopy[i].name.toLowerCase());
-      if (arrayFilter[i].indexOf(dataFilter.toLowerCase()) !== -1)
-        newArrayFilter.push(dataCopy[i]);
+      arraySearch.push(dataCopy[i].name.toLowerCase());
+      if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
+        newArraySearch.push(dataCopy[i]);
     }
     break;
   default: alert('No existe opcion');
   }
-  return newArrayFilter;
+  return newArraySearch;
 };
 
+const statFunction = (num, arrKeys) => {
+  return (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * num)).toFixed(2);
+};
 
 window.data = {
-  filterData: filterDataFunction,
   sortData: sortDataFunction,
+  searchData: searchDataFunction,
+  computeStats: statFunction,
 };

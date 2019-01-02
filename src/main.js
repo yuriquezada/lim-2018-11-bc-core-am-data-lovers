@@ -54,10 +54,10 @@ const createModalWindow = (mod) => {
         <tr>
           <td>${ arrKeys.stats.hp}</td>
           <td>${ arrKeys.stats.hpperlevel}</td>
-          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 5)).toFixed(2)}</td>
-          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 10)).toFixed(2)}</td>
-          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 15)).toFixed(2)}</td>
-          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 18)).toFixed(2)}</td>
+          <td>${window.data.computeStats(5, arrKeys)}</td>
+          <td>${window.data.computeStats(10, arrKeys)}</td>
+          <td>${window.data.computeStats(15, arrKeys)}</td>
+          <td>${window.data.computeStats(18, arrKeys)}</td>
         </tr>
       </table>
     </div>`;
@@ -67,19 +67,19 @@ const createModalWindow = (mod) => {
 };
 createModalWindow(arrKeys);
 
-const functionModal = (event) => {
-  let x = event.target;
-  const capturedId = x.id;
-  const classNameModalWindow = document.getElementsByClassName('modal-content');
-  if (capturedId === classNameModalWindow.id) {
-    createModalWindow()
-  } else {}
-};
-functionModal();
+// const functionModal = (event) => {
+//   let targetCard = event.target;
+//   const capturedId = targetcard.id;
+//   const classNameModalWindow = document.getElementsByClassName('modal-content');
+//   if (capturedId === classNameModalWindow.id) {
+//     createModalWindow()
+//   } else {}
+// };
+// functionModal();
 
 // function myId(event) {
-//   let x = event.target;
-//   const capturedId = x.id;
+//   let targetCard = event.target;
+//   const capturedId = targetCard.id;
 //   return capturedId;
 // }
 
@@ -101,10 +101,9 @@ functionModal();
 const functionListenFilterOrder = () => {
   const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
   const listenFiltersByCategories = filtersByCategories.options[filtersByCategories.selectedIndex].value;
-  const arrayInputFilter = window.data.filterData(arrKeys, inputSearchText.value, parseInt(listenFiltersByCategories[0]));
+  const arrayInputFilter = window.data.searchData(arrKeys, inputSearchText.value, parseInt(listenFiltersByCategories[0]));
   
   createTemplateCard(window.data.sortData(arrayInputFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
-  return 1;
 };
 
 const functionMain = () => {
@@ -117,3 +116,19 @@ const functionMain = () => {
 functionMain();
 
 // Filtrar
+// const filterChamp = document.getElementsByClassName('filter-champ');
+// const tagArray = Object.values(filterChamp);
+// let choices = [];
+// tagArray.forEach(tag => {
+//   tag.addEventListener('change', () => {
+//     if (tag.checked === true) {
+//       choices.push(tag.value);
+//     } else {
+//       const x = choices.indexOf(tag.value);
+//       choices.splice(x, 1);
+//       createTemplateCard(arrKeys);
+//     }
+//     const arrKeysFilter = arrKeys.filter(porFavorDebesSalir)
+//     createTemplateCard(arrKeysFilter);
+//   });
+// });

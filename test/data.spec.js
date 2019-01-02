@@ -28,6 +28,7 @@ describe('data', () => {
   it('Debería ser un objeto', () => {
     expect(typeof data).toBe('object');
   });
+
   describe('data.sortData', () => {
     it('Debería ser una función', () => {
       expect(typeof window.data.sortData).toBe('function');
@@ -43,6 +44,15 @@ describe('data', () => {
   describe('data.filterData', () => {
     it('Debería ser una función', () => {
       expect(typeof window.data.filterData).toBe('function');      
+    });
+    it('Debería devolver el array filtrado por rol Assassin', () => {
+      expext(window.data.filterData()).toEqual(output3);
+    })
+  });
+
+  describe('data.computeStats', () => {
+    it('Debería ser una función', () => {
+      expect(typeof window.data.computeStats).toBe('function');
     });
   });
 });
