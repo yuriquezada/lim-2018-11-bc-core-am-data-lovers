@@ -5,7 +5,8 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    text-align: center
+    text-align: center;
+    background-repeat: repeat-x;
 }
   
 section{
@@ -33,7 +34,7 @@ section{
 .search-bar{
     border: none;
     border-radius: 5px;
-    background-color: rgba(217, 217, 219,0.5);
+    background-color: rgba(217, 217, 219,0.8);
     padding: 8px;
     width: 90%;
     margin: auto
@@ -239,7 +240,8 @@ section{
 }
 
 .modal-window div {
-    width: 400px;
+    width: 600px;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -269,4 +271,7 @@ section{
     font-family: 'ZCOOL KuaiLe';
 }
 
-
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

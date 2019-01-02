@@ -37,10 +37,29 @@ const createModalWindow = (mod) => {
     <div class = "modal-content" id="${ arrKeys.id }">
       <a href="#" title="Close" class="modal-close">X</a>
       <img class="post-image" src="" />
-      <h1>${ arrKeys.name}</h1>
+
+      <h1> <img src="${ arrKeys.img}"/>${ arrKeys.name}</h1>
       <h3>${ arrKeys.title}</h3>
       <p>${ arrKeys.blurb}</p>
       <p>${ arrKeys.tags}</p>
+      <table>
+        <tr>
+          <th> Health Points (HP)</th>
+          <th> HP per Level</th>
+          <th> HP at Lvl. 5</th>
+          <th> HP at Lvl. 10</th>
+          <th> HP at Lvl. 15</th>
+          <th> HP at Lvl. 18</th>
+        </tr>
+        <tr>
+          <td>${ arrKeys.stats.hp}</td>
+          <td>${ arrKeys.stats.hpperlevel}</td>
+          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 5)).toFixed(2)}</td>
+          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 10)).toFixed(2)}</td>
+          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 15)).toFixed(2)}</td>
+          <td>${ (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * 18)).toFixed(2)}</td>
+        </tr>
+      </table>
     </div>`;
     modalWindow += card;
   });
@@ -48,15 +67,21 @@ const createModalWindow = (mod) => {
 };
 createModalWindow(arrKeys);
 
-function myId(event) {
+const functionModal = (event) => {
   let x = event.target;
   const capturedId = x.id;
-  return capturedId;
-}
+  const classNameModalWindow = document.getElementsByClassName('modal-content');
+  if (capturedId === classNameModalWindow.id) {
+    createModalWindow()
+  } else {}
+};
+functionModal();
 
-  for (let i=0; i < arrKeys.length;i++) {
-    console.log(arrKeys[i]);
-  }
+// function myId(event) {
+//   let x = event.target;
+//   const capturedId = x.id;
+//   return capturedId;
+// }
 
 
 // Filtrado
@@ -68,56 +93,6 @@ function myId(event) {
 //     return data.tags.includes('Assassin') === true;
 //   });
 //   console.log(filterAssassin);
-// }
-
-
-// const fighter = document.getElementById('fighter');
-// fighter.addEventListener('change', functionFilterFighter);
-// function functionFilterFighter() {
-//   const filterFighter = arrKeys.filter(function(data) {
-//     return data.tags.includes('Fighter') === true;
-//   });
-//   console.log(filterFighter);
-// }
-
-
-// const mage = document.getElementById('mage');
-// mage.addEventListener('click', functionFilterMage);
-// function functionFilterMage() {
-//   const filterMage = arrKeys.filter(function(data) {
-//     return data.tags.includes('Mage') === true;
-//   });
-//   console.log(filterMage);
-// }
-
-
-// const marksman = document.getElementById('marksman');
-// marksman.addEventListener('click', functionFilterMarksman);
-// function functionFilterMarksman() {
-//   const filterMarksman = arrKeys.filter(function(data) {
-//     return data.tags.includes('Marksman') === true;
-//   });
-//   console.log(filterMarksman);
-// }
-
-
-// const support = document.getElementById('support');
-// support.addEventListener('click', functionFilterSupport);
-// function functionFilterSupport() {
-//   const filterSupport = arrKeys.filter(function(data) {
-//     return data.tags.includes('Support') === true;
-//   });
-//   console.log(filterSupport);
-// }
-
-
-// const tank = document.getElementById('tank');
-// tank.addEventListener('click', functionFilterTank);
-// function functionFilterTank() {
-//   const filterTank = arrKeys.filter(function(data) {
-//     return data.tags.includes('Tank') === true;
-//   });
-//   console.log(filterTank);
 // }
 
 
