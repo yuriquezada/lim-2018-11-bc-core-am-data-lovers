@@ -1,28 +1,44 @@
 // Filtrar
-const assassin = document.getElementById('assassin');
-const fighter = document.getElementById('fighter');
-const mage = document.getElementById('mage');
-const marksman = document.getElementById('marksman');
-const support = document.getElementById('support');
-const tank = document.getElementById('tank');
-const filterTags = (tag, string) => {
+//////////////FILTRADO///////////////////////////////////////////
+const filterChamp = document.getElementsByClassName('filter-champ');
+const tagArray = Object.values(filterChamp);
+
+let choices = [];
+
+tagArray.forEach(tag => {
   tag.addEventListener('change', () => {
-    const arrKeysFilter = arrKeys.filter(data => {
-      return data.tags.includes(string) === true;
-    });
-    if (tag.checked === true) {
-      createTemplateCard(arrKeysFilter);
-    } else {
+    if (tag.checked == true) {
+      choices.push(tag.value);
+    }
+    else {
+      x = choices.indexOf(tag.value);
+      choices.splice(x, 1)
       createTemplateCard(arrKeys);
     }
-  });
-};
-filterTags(assassin, assassin.value);
-filterTags(fighter, fighter.value);
-filterTags(mage, mage.value);
-filterTags(marksman, marksman.value);
-filterTags(support, support.value);
-filterTags(tank, tank.value);
+
+    function porFavorDebesSalir(data) {
+      const arregloTrueFalse = [];
+      choices.forEach(choice => {
+        if (data.tags.includes(choice)) {
+          arregloTrueFalse.push(true);
+        } else {
+          arregloTrueFalse.push(false);
+        }
+        console.log(arregloTrueFalse);
+      });
+
+      if (arregloTrueFalse.includes(false)) {
+        return false;
+      } else {
+        console.log(data);
+        return data;
+      }
+    }
+    const arrKeysFilter = arrKeys.filter(porFavorDebesSalir);
+
+    createTemplateCard(arrKeysFilter)
+  })
+})
 
 // Ordenar
 const sortDataFunction = (data, sortBy, sortOrder) => {
