@@ -21,11 +21,11 @@ const input2 = [
   {id: 'Amumu', name: 'Amumu', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Amumu.png', difficulty: 3},
   {id: 'Anivia', name: 'Anivia', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Anivia.png', difficulty: 10}
 ];
-const output3 = [
+/*const output3 = [
   {id: 'Amumu', name: 'Amumu', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Amumu.png', difficulty: 3},
   {id: 'Alistar', name: 'Alistar', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Alistar.png', difficulty: 7},
   {id: 'Anivia', name: 'Anivia', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Anivia.png', difficulty: 10}
-];
+];*/
 // const output4 = [
 //   {id: 'Anivia', name: 'Anivia', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Anivia.png'},
 //   {id: 'Alistar', name: 'Alistar', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Alistar.png'},
@@ -46,12 +46,12 @@ describe('data', () => {
     it('Debería devolver el array de la Z-A', () => {
       expect(window.data.sortData(input1, 0, 1)).toEqual(output2);
     });
-    it('Debería devolver el array ordenado por dificultad ascendente', () => {
+    /*it('Debería devolver el array ordenado por dificultad ascendente', () => {
       expect(window.data.sortData(input2, 1, 0)).toEqual(output3);
     });
     // it('Debería devolver el array ordenado por dificultad descendente', () => {
     //   expect(window.data.sortData(input2, 1, 1)).toEqual(output4);
-    // });
+    // });*/
   }); 
   describe('data.filterData', () => {
     it('Debería ser una función', () => {
