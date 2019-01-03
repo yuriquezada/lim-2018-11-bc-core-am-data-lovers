@@ -69,10 +69,10 @@ createModalWindow(arrKeys);
 
 // const functionModal = (event) => {
 //   let targetCard = event.target;
-//   const capturedId = targetcard.id;
+//   let capturedId = targetCard.id;
 //   const classNameModalWindow = document.getElementsByClassName('modal-content');
 //   if (capturedId === classNameModalWindow.id) {
-//     createModalWindow()
+    
 //   } else {}
 // };
 // functionModal();
@@ -115,20 +115,4 @@ const functionMain = () => {
 
 functionMain();
 
-// Filtrar
-// const filterChamp = document.getElementsByClassName('filter-champ');
-// const tagArray = Object.values(filterChamp);
-// let choices = [];
-// tagArray.forEach(tag => {
-//   tag.addEventListener('change', () => {
-//     if (tag.checked === true) {
-//       choices.push(tag.value);
-//     } else {
-//       const x = choices.indexOf(tag.value);
-//       choices.splice(x, 1);
-//       createTemplateCard(arrKeys);
-//     }
-//     const arrKeysFilter = arrKeys.filter(porFavorDebesSalir)
-//     createTemplateCard(arrKeysFilter);
-//   });
-// });
+// Slide de imágenes del Index Home

@@ -1,6 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+@font-face{
+    font-family: aGaramondPro;
+    src: url(./font/AGaramondPro-Regular.woff);
+}
 
-body{
+/* Index Home */
+.body-home{
+    /* background-image: url(./img/background3.jpg); */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+/* Barra de menu */
+.menu-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #07090a;
+    
+  }
+  
+  .menu-option {
+    width: 33.33%;
+    float: left;
+  }
+  
+  .menu-option a {
+    display: block;
+    color: white;
+    font-family: aGaramondPro;
+    text-decoration: underline overline;
+    font-size: 25px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .menu-option a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #896331;
+    
+  }
+  .active:hover {
+      background-color: #937341;
+      color:black;
+      font-weight: bold;
+  }
+
+/*Index List of champions*/
+.body-champs{
     background-image: url("https://universe-meeps.leagueoflegends.com/v1/assets/images/factions/shadow-isles_splash.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -20,24 +74,13 @@ section{
     
 }
 
-.subtitle-lol{
-    text-align: center;
-    font-size: 300%;
-    margin: auto;
-    padding: 30px;
-    font-family: 'ZCOOL KuaiLe';
-    text-decoration: underline overline;
-    color: #896331;
-    background-color: rgb(31, 31, 31, 0.8)
-}
-
 .search-bar{
     border: none;
     border-radius: 5px;
     background-color: rgba(217, 217, 219,0.8);
     padding: 8px;
     width: 90%;
-    margin: auto
+    margin: 20px auto auto auto;
 }
 
 .champions-sort, .champions-search, .champions-filter{
@@ -99,7 +142,11 @@ section{
     height: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+}
+
+.card-link{
+    padding: 10px;
 }
 
 .blog-card{
@@ -108,7 +155,7 @@ section{
     justify-content: center;
     text-align: center;
     align-content: center;
-    background-color: #131f26;
+    background-color: #07090a;
     color: #896331;
     opacity: 0.9;
     border: 3px solid #937341;
@@ -127,7 +174,7 @@ section{
 
 .blog-card:hover{
     
-    background-color: #243741;
+    background-color: #07090a;
     border: 3px solid #A68747;
     opacity: 1;
     transition: 0.3s ease;
@@ -218,6 +265,14 @@ section{
     }
 }
 
+footer{
+    padding: 1% 0 0 0;
+    font-family: 'ZCOOL KuaiLe';
+    color: gray;
+    text-align: bottom;
+
+}
+
 .modal-window {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.25);
@@ -264,7 +319,7 @@ section{
 }
 
 .modal-close:hover {
-    color: #000;
+    color: #0000;
   }
 
 .modal-content{
@@ -275,3 +330,6 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+
+  /* Slide de imágenes */
+  

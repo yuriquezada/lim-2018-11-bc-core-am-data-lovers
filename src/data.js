@@ -67,7 +67,7 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
 };
 
 // Buscador
-const searchDataFunction = (data, dataSearch, condition) => {
+const searchDataFunction = (data, dataSearch) => {
   let dataCopy = [];
   let arraySearch = [];
   let newArraySearch = [];
@@ -77,17 +77,12 @@ const searchDataFunction = (data, dataSearch, condition) => {
 
   if (dataSearch.length === 0)
     return dataCopy;
-
-  switch (condition) {   
-  case 0:
-    for (let i = 0; i < dataCopy.length; i++) {
-      arraySearch.push(dataCopy[i].name.toLowerCase());
-      if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
-        newArraySearch.push(dataCopy[i]);
-    }
-    break;
-  default: alert('No existe opcion');
-  }
+ 
+  for (let i = 0; i < dataCopy.length; i++) {
+    arraySearch.push(dataCopy[i].name.toLowerCase());
+    if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
+      newArraySearch.push(dataCopy[i]);
+  } 
   return newArraySearch;
 };
 

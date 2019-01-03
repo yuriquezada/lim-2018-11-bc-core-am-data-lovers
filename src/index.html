@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <title>List of Champions</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-<body onclick="functionModal(event)">
+<body class="body-champs" onclick="functionModal(event)">
   <header>
-    <img src="img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">
-
-    <h2 class="subtitle-lol">List of Champions</h2>
+    <img src="./img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">
+    <ul class="menu-bar">
+      <li class="menu-option"><a href="./index2.html">Inicio</a></li>
+      <li class="menu-option"><a class="active" href="./index.html">Lista de Campeones</a></li>
+      <li class="menu-option"><a href="#about">Estadísticas</a></li>
+    </ul>
   </header>
 
   <form class="search-bar">
@@ -60,10 +62,10 @@
 
   <section id="open-modal" class="modal-window"></section>
   <section id="container-list" class="container-list"></section>
-    
+  
+  <footer>League of Legends and Riot Games Inc. are trademarks or registered trademarks of Riot Games, Inc.</footer>
   <script src="./data/lol/lol.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>
