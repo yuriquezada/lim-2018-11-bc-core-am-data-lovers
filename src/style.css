@@ -14,40 +14,30 @@
 }
 
 /* Barra de menu */
-.menu-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #07090a;
-    
-  }
-  
-  .menu-option {
-    width: 33.33%;
-    float: left;
-  }
-  
-  .menu-option a {
-    display: block;
+.menu-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    padding: 0%;
+    background: #07090a;
+}
+
+.menu-bar a {
+    width: 1000px;
+    padding: 15px;
     color: white;
     font-family: aGaramondPro;
-    text-decoration: underline overline;
     font-size: 25px;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  .menu-option a:hover:not(.active) {
+}
+.menu-bar a:hover:not(.active) {
     background-color: #111;
   }
   
-  .active {
+.active{
     background-color: #896331;
-    
-  }
-  .active:hover {
+}
+.active:hover {
       background-color: #937341;
       color:black;
       font-weight: bold;
