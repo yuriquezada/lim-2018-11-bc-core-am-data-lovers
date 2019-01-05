@@ -9,11 +9,11 @@ tagArray.forEach(tag => {
       choices.push(tag.value);
     } else {
       const x = choices.indexOf(tag.value);
-      choices.splice(x, 1); 
+      choices.splice(x, 1);
       createTemplateCard(arrKeys);
     }
 
-    function porFavorDebesSalir(data) {
+    const arrKeysFilter = arrKeys.filter(data => {
       const arregloTrueFalse = [];
       choices.forEach(choice => {
         if (data.tags.includes(choice)) {
@@ -28,8 +28,7 @@ tagArray.forEach(tag => {
       } else {
         return data;
       }
-    }
-    const arrKeysFilter = arrKeys.filter(porFavorDebesSalir);
+    });
 
     createTemplateCard(arrKeysFilter);
   });
@@ -38,14 +37,14 @@ tagArray.forEach(tag => {
 // Ordenar
 const sortDataFunction = (data, sortBy, sortOrder) => {
   let newArrayFilter = [];
- 
+
   for (let i = 0; i < data.length; i++)
     newArrayFilter.push(Object.assign({}, data[i]));
- 
+
   if (sortBy === 0) {
     // Ordenar por Alfabéticamente
     newArrayFilter.sort(
-      function(ab, cd) {
+      function (ab, cd) {
         if (sortOrder === 0) {
           if (ab.name > cd.name) return 1;
           else return -1;
@@ -56,9 +55,9 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
       }
     );
   } else {
-  // Ordenar por Dificultad
+    // Ordenar por Dificultad
     newArrayFilter.sort(
-      function(ab, cd) {
+      function (ab, cd) {
         if (sortOrder === 0) return ab.info.difficulty - cd.info.difficulty;
         else return cd.info.difficulty - ab.info.difficulty;
       });
@@ -77,12 +76,12 @@ const searchDataFunction = (data, dataSearch) => {
 
   if (dataSearch.length === 0)
     return dataCopy;
- 
+
   for (let i = 0; i < dataCopy.length; i++) {
     arraySearch.push(dataCopy[i].name.toLowerCase());
     if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
       newArraySearch.push(dataCopy[i]);
-  } 
+  }
   return newArraySearch;
 };
 
