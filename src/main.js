@@ -5,7 +5,6 @@ const filtersByCategories = document.getElementById('lol-filter');
 const inputSearchText = document.getElementById('search-champion');
 const btnSearch = document.getElementById('search-btn');
 
-
 // Recorre la data y plasma en el html templates (cards y ventanas modales)
 
 const containerList = document.getElementById('container-list');
@@ -89,7 +88,7 @@ const filterChamp = (arrayTag) => {
 };
 filterChamp(tagArray);
 
-// Ordenar
+// Ordenar y Buscar
 
 const functionListenFilterOrder = () => {
   const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
@@ -107,3 +106,4 @@ const functionMain = () => {
 };
 
 functionMain();
+

@@ -11,6 +11,7 @@
     background-position: center;
     background-size: cover;
     text-align: center;
+    margin: 0;
 }
 
 /* Barra de menu */
@@ -52,27 +53,41 @@
     background-color: #896331;
 }
 .active:hover {
-      background-color: #937341;
-      color:black;
-      font-weight: bold;
-  }
-.home-container div {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #937341;
+    color:black;
+    font-weight: bold;
+}
+.explanation-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 46%;
+    height: 1200px;
+    margin: 1%;
+    float: left;
+    border: 5px inset #896331;
+    overflow: auto;
+}
+
+.summoners-code{
+    background-color: rgba(255, 255, 255, 0.1);
     width: 48%;
     margin: 1%;
     float: left;
+    height: 48%;
+    padding-bottom: 30px;
 }
 
+.explanation-box h1{
+    font-family: aGaramondPro;
+    padding: 1%;
+}
 .explanation-box h2{
     font-family: aGaramondPro;
     padding: 1%;
-}
-.explanation-box h3{
-    font-family: aGaramondPro;
+    border-top: 1px solid black;
 }
 .explanation-box p{
     font-family: 'ZCOOL KuaiLe';
-    padding: 1%;
+    padding: 1% 0;
 }
 
 .btn-playnow{
@@ -86,8 +101,7 @@
     transition-duration:0.5s;
     width: 40px;
     height: 34px;
-    overflow: hidden;
-    
+    overflow: hidden;    
 }
 .btn-playnow:hover{
     transition: 0.3s ease;
@@ -228,8 +242,8 @@ section{
     overflow: hidden;
     margin: 5px;
     padding: 20px;
-    width: 140px;
-    height: 220px;
+    width: 150px;
+    height: 250px;
     float: left;
     outline:none;
     word-wrap: break-word;
@@ -318,6 +332,10 @@ section{
         margin: auto;
         padding-top: 2%
     }
+
+    .modal-content{
+        width: 100%;
+    }
 }
 @media (max-width: 400px)
 {
@@ -349,7 +367,8 @@ section{
     opacity: 1;
     pointer-events: auto;
 }
- 
+
+
 .modal-close {
     color: white;
     line-height: 25px;
@@ -367,13 +386,14 @@ section{
 
 .modal-content{
     font-family: 'ZCOOL KuaiLe';
-    width: 700px;
+    width: 40%;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
+    
 }
 
 
@@ -393,10 +413,33 @@ table, th, td {
     transform: translate(-50%, -50%);
     border: 3px inset #896331;
     border-radius: 1%;
+    overflow: auto;
+}
+
+.modal-info::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: silver;
+}
+
+.modal-info::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+	background-color: gray;
+}
+
+.modal-info::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #896331;
 }
 
 .modal-info img{
     padding-top: 15px;
+    width: 20%;
 }
 
 .modal-info h1{
@@ -409,15 +452,139 @@ table, th, td {
     font-size: 25px;
 }
 
-.modal-info p{
-    
-}
-
 .modal-img{
     background-position: center;
     width: 100%;
     height: auto;
 }
 
+/* Slideshow automático de imágenes */
 
-  
+.mySlides {
+    width: 100%;
+}
+.mySlides img {
+    vertical-align: middle;
+    width:100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgb(137, 99, 49, 0.8);
+  color:black;
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 20px;
+  font-family: 'ZCOOL KuaiLe';
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: 'ZCOOL KuaiLe';
+}
+
+/* The dots/bullets/indicators */
+.dot-chain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #A68747;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.active-slide-img, .dot:hover {
+  background-color: #896331;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Video Home*/
+
+.video-container h2{
+    font-family: aGaramondPro;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.video-container p{
+    font-family: 'ZCOOL KuaiLe';
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
