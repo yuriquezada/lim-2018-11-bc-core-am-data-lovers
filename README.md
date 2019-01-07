@@ -21,7 +21,7 @@ El juego está inspirado en el popular mapa personalizado del Warcraft III, Defe
 ## Resumen del proyecto
 
 En este proyecto construimos una página web para visualizar un
-conjunto de datos que se adecúa a lo que nuestro usuario necesita. Este set de datos muestra la lista de jugadores en una liga del juego League of Legends (LoL)
+conjunto de datos que se adecúa a lo que nuestro usuario necesita. Este set de datos muestra la lista de jugadores en una liga del juego League of Legends (LoL).
 
 Primero elegimos quién sería nuestro usuario y qué
 necesita saber o ver exactamente; luego construimos una interfaz que le va ayudar a interactuar y entender mejor esos datos. Nuestra página web permitirá **visualizar la data, filtrarla, ordenarla**.
@@ -33,6 +33,10 @@ Los usuarios a los que este proyecto va dirigido son aquellos jugadores de video
 
 ### **2. Síntesis y Definición**
 ![picture](src\img\Definicion.png)
+
+El usuario entrevistado es un jugador principiante de League of Legends, conoce el juego desde hace mucho tiempo, pero comenzó a jugarlo gracias a la publicidad del último campeonato mundial en el 2018.  Durante la entrevista el usuario hizo hincapié en la cantidad de campeones que se pueden usar en el juego. La diversidad en estos más de 130 personajes hace complicado para un jugador principiante el poder reconocerlos y asociarlos con sus roles, habilidades, dificultad, etc. Si pudiese visualizar la información de los héroes como sus nombres e imágenes, la dificultad de uso de cada uno, los tipos/roles que cumplen (assassin, fighter, mage, marksman, support, tank) e información extra como los puntos de vida y de maná de cada campeón por niveles, está seguro que le facilitaría a desarrollarse mejor en el juego.
+
+![picture](src\img\arquetipoLOL.jpg)
 #### HISTORIAS DE USUARIO
 1.  Yo como usuario quiero poder visualizar a todos los campeones con sus nombres e imágenes para poder diferenciarlos.
 2.	Yo como usuario quiero poder ver la dificultad de cada campeón de League of Legends para poder saber con cuál personaje comenzar a jugar.
@@ -42,10 +46,13 @@ Los usuarios a los que este proyecto va dirigido son aquellos jugadores de video
 
 ### **3. Ideación**
 ![picture](src\img\Ideacion.png)
+Ya que tenemos la data de los campeones, la idea de producto es una página web que ayude a nuestro usuario a que conozca a los campeones de League of Leyends de una forma más práctica y sencilla, visualizar, buscar, ordenar y filtrar la data según sus requerimientos.
 
 ### **4. Prototipado**
 ![picture](src\img\Prototipado.png)
 * #### Prototipo de baja fidelidad
+![picture](src\img\prototipo_bf.jpg)
+
 * #### Prototipo de alta fidelidad 
 
 ### **4. User Testing**

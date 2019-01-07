@@ -19,16 +19,30 @@
     flex-wrap: nowrap;
     margin: auto;
     padding: 0%;
-    background: #07090a;
+    background-color: #07090a;
+    list-style-type: none;
+    overflow: hidden;
 }
 
-.menu-bar a {
-    width: 1000px;
-    padding: 15px;
+.menu-option{
+    width: 33.33%;
+    height: auto;
+    float: left;
+}
+
+.menu-option a{
+    display: block;
+}
+
+.menu-bar a{
+    width: 100%;
+    padding: 2%;
     color: white;
     font-family: aGaramondPro;
     font-size: 25px;
     text-decoration: none;
+    text-align: center;
+    
 }
 .menu-bar a:hover:not(.active) {
     background-color: #162228;
@@ -48,9 +62,7 @@
     margin: 1%;
     float: left;
 }
-.explanation-box{
-    
-}
+
 .explanation-box h2{
     font-family: aGaramondPro;
     padding: 1%;
@@ -217,7 +229,7 @@ section{
     margin: 5px;
     padding: 20px;
     width: 140px;
-    height: 200px;
+    height: 220px;
     float: left;
     outline:none;
     word-wrap: break-word;
@@ -240,10 +252,10 @@ section{
 
 .blog-card img{
     display: flex;
+    align-content: flex-end;
     margin: auto;
     width: 40%;
     height: 30%;
- 
 }
 
 .article-details{
@@ -355,7 +367,6 @@ section{
 
 .modal-content{
     font-family: 'ZCOOL KuaiLe';
-    background-color: white;
     width: 700px;
     height: auto;
     position: absolute;
@@ -398,11 +409,15 @@ table, th, td {
     font-size: 25px;
 }
 
+.modal-info p{
+    
+}
 
 .modal-img{
     background-position: center;
     width: 100%;
     height: auto;
 }
+
 
   

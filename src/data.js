@@ -1,40 +1,25 @@
 // Función para Filtrar
-const filterChamp = document.getElementsByClassName('filter-champ');
-const tagArray = Object.values(filterChamp);
-let choices = [];
-
-tagArray.forEach(tag => {
-  tag.addEventListener('change', () => {
-    if (tag.checked === true) {
-      choices.push(tag.value);
-    } else {
-      const x = choices.indexOf(tag.value);
-      choices.splice(x, 1);
-      createTemplateCard(arrKeys);
-    }
-
-    const arrKeysFilter = arrKeys.filter(data => {
-      const arregloTrueFalse = [];
-      choices.forEach(choice => {
-        if (data.tags.includes(choice)) {
-          arregloTrueFalse.push(true);
-        } else {
-          arregloTrueFalse.push(false);
-        }
-      });
-
-      if (arregloTrueFalse.includes(false)) {
-        return false;
+const filterDataFunction = (data, choices) => {
+  const arrKeysFilter = data.filter(champion => {
+    const arrTrueFalse = [];
+    choices.forEach(choice => {
+      if (champion.tags.includes(choice)) {
+        arrTrueFalse.push(true);
       } else {
-        return data;
+        arrTrueFalse.push(false);
       }
     });
 
-    createTemplateCard(arrKeysFilter);
+    if (arrTrueFalse.includes(false)) {
+      return false;
+    } else {
+      return champion;
+    }
   });
-});
+  return arrKeysFilter;
+};
 
-// Ordenar
+// Función para Ordenar
 const sortDataFunction = (data, sortBy, sortOrder) => {
   let newArrayFilter = [];
 
@@ -93,6 +78,7 @@ const searchDataFunction = (data, dataSearch) => {
 
 window.data = {
   sortData: sortDataFunction,
+  filterData: filterDataFunction,
   searchData: searchDataFunction,
   computeStats: statFunction,
 };

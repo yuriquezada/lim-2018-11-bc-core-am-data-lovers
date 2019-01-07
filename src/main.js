@@ -21,13 +21,13 @@ const createTemplateCard = (arrKeys) => {
     newGrill.push(`
 
     <div class ="card-link">
-        <a class="blog-card" id="${ arrKeys.id }" href="#openmodal${i}">
+        <a class="blog-card" id="${ data[i].id }" href="#openmodal${i}">
         <div>
           <img class="post-image " src="${data[i].img}" />
           <div class="article-details" >
-          <h1 class="post-name" id="${ arrKeys.id }">${ data[i].name} </h1>
-          <h3 class="post-title" id="${ arrKeys.id }"> ${ data[i].title}</h3>
-          <h3 class="post-title" id="${ arrKeys.id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ data[i].info.difficulty}</h3>
+          <h1 class="post-name" id="${ data[i].id }">${ data[i].name} </h1>
+          <h3 class="post-title" id="${ data[i].id }"> ${ data[i].title}</h3>
+          <h3 class="post-title" id="${ data[i].id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ data[i].info.difficulty}</h3>
           </div>                   
         </div>
         </a>
@@ -70,7 +70,26 @@ const createTemplateCard = (arrKeys) => {
 };
 createTemplateCard(arrKeys);
 
-// Buscador 
+// Filtrar
+const tagArray = Object.values(document.getElementsByClassName('filter-champ'));
+const filterChamp = (arrayTag) => {
+  let arrayChoices = [];
+  arrayTag.forEach(tag => {
+    tag.addEventListener('change', () => {
+      if (tag.checked === true) {
+        arrayChoices.push(tag.value);
+      } else {
+        const x = arrayChoices.indexOf(tag.value);
+        arrayChoices.splice(x, 1);
+        createTemplateCard(arrKeys);
+      }
+      createTemplateCard(window.data.filterData(arrKeys, arrayChoices));
+    });
+  });
+};
+filterChamp(tagArray);
+
+// Ordenar
 
 const functionListenFilterOrder = () => {
   const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
