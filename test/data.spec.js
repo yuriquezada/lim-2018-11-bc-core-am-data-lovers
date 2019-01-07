@@ -6,9 +6,13 @@ const input1 = [
 ];
 
 const input2 = [
-  {id: 'Alistar', name: 'Alistar', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Alistar.png', difficulty: 7},
-  {id: 'Amumu', name: 'Amumu', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Amumu.png', difficulty: 3},
-  {id: 'Anivia', name: 'Anivia', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Anivia.png', difficulty: 10}
+  {id: 'Ahri', name: 'Ahri', tags: ['Mage', 'Assassin']},
+  {id: 'Braum', name: 'Braum', tags: ['Support', 'Tank']},
+  {id: 'Corki', name: 'Corki', tags: ['Marksman']}
+];
+
+const input3 = [
+  {id: 'Ahri', name: 'Ahri', hp: 514.4, hpperlevel: 80}
 ];
 
 const output1 = [
@@ -22,6 +26,11 @@ const output2 = [
   {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png'},
   {id: 'Aatrox', name: 'Aatrox', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png'}
 ];
+const output3 = [
+  {id: 'Ahri', name: 'Ahri', tags: ['Mage', 'Assassin']},
+];
+
+const output4 = [1954.40];
 
 
 describe('data', () => {
@@ -46,13 +55,16 @@ describe('data', () => {
       expect(typeof window.data.filterData).toBe('function');      
     });
     it('Debería devolver el array filtrado por rol Assassin', () => {
-      expext(window.data.filterData()).toEqual(output3);
-    })
+      expect(window.data.filterData(input2, 'Assassin')).toEqual(output3);
+    });
   });
 
   describe('data.computeStats', () => {
     it('Debería ser una función', () => {
       expect(typeof window.data.computeStats).toBe('function');
+    });
+    it('Debería devolver 1954.40', () => {
+      expect(window.data.computeStats(18, input3)).toEqual(output4);
     });
   });
 });

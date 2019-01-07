@@ -44,7 +44,7 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   if (sortBy === 0) {
     // Ordenar por Alfabéticamente
     newArrayFilter.sort(
-      function (ab, cd) {
+      function(ab, cd) {
         if (sortOrder === 0) {
           if (ab.name > cd.name) return 1;
           else return -1;
@@ -57,12 +57,17 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
   } else {
     // Ordenar por Dificultad
     newArrayFilter.sort(
-      function (ab, cd) {
+      function(ab, cd) {
         if (sortOrder === 0) return ab.info.difficulty - cd.info.difficulty;
         else return cd.info.difficulty - ab.info.difficulty;
       });
   }
   return newArrayFilter;
+};
+
+// Función Estadística
+const statFunction = (num, arrKeys) => {
+  return (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * num)).toFixed(2);
 };
 
 // Buscador
@@ -85,9 +90,6 @@ const searchDataFunction = (data, dataSearch) => {
   return newArraySearch;
 };
 
-const statFunction = (num, arrKeys) => {
-  return (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * num)).toFixed(2);
-};
 
 window.data = {
   sortData: sortDataFunction,

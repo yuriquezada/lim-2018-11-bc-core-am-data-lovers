@@ -2,63 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>List of Champions</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-<body class="body-home">
-    <header>
-        <img src="./img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">
-        <ul class="menu-bar">
-            <a class="active" href="#home">Inicio</a>
-            <a href="./index.html">Lista de Campeones</a>
-            <a href="#about">Estadísticas</a>
-        </ul>
-    </header>
-    <section>
-        <div>
-            <h2>¿Qués es League of Legends?</h2>
-            <p>League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad
-                de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones,
-                cada uno con un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla
-                y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones frecuentes y un emocionante
-                panorama competitivo, League of Legends ofrece posibilidades de juego ilimitadas a usuarios de todos los
-                niveles de habilidad.</p>
-            <h3>Combate Cara a Cara</h3>
-            <p>Combina pensamiento estratégico, reflejos veloces y juego en equipo coordinado para aplastar a tus enemigos,
-                tanto en pequeñas escaramuzas como en intensas batallas 5v5.</p>
-            <h3>Prepara tus estrategias y evoluciona</h3>
-            <p>Con actualizaciones de juego regulares, múltiples mapas y modos de juego, y nuevos campeones que se unen a la
-                Liga constantemente, el único límite posible que se le puede poner a tu éxito es tu propia ingenuidad.</p>
-            <h3>Compite y Escala</h3>
-            <p>Tanto si quieres disfrutar jugando contra bots como si deseas subir posiciones en el sistema de liga, League
-                of Legends tiene la tecnología necesaria para emparejarte con un grupo de competidores de nivel similar.</p>
-            <h3>Lucha con honor</h3>
-            <p>Compite con honor y recibe menciones especiales de los demás jugadores para recompensar tu forma de jugar.</p>
-            <h3>Disfruta del deporte electrónico</h3>
-            <p>League of Legends tiene la escena competitiva más activa del mundo, por lo que cuenta con numerosos torneos por
-                todo el mundo, incluyendo la prestigiosa Championship Series en la que profesionales con sueldo compiten
-                por llevarse millones.</p>
-            <h3>La comunidad de juego en línea más grande del mundo</h3>
-            <p>Únete a la comunidad de juego en línea más grande del mundo: haz amigos, forma equipos y enfréntate a decenas
-                de millones de oponentes de países de todo el mundo para luego intercambiar opiniones en
-                <a href="https://www.reddit.com/r/leagueoflegends/">Reddit</a>,
-                <a href="https://www.youtube.com/leagueoflegends">YouTube</a>,
-                <a href="https://www.instagram.com/leagueoflegends/">Instagram</a> y
-                <a href="https://nexus.leagueoflegends.com/en-us/2009/10/join-the-community/">más allá</a>
-            </p>
+<body class="body-champs">
+  <header>
+    <img src="./img/League-of-Legends-PNG-Clipart.png" alt="" class="title-lol">
+    <ul class="menu-bar">
+      <a href="./index1.html">Inicio</a>
+      <a class="active" href="#ListofChampions">Lista de Campeones</a>
+      <a href="#stats">Estadísticas</a>
+    </ul>
+  </header>
 
-            <a href="https://signup.na.leagueoflegends.com/en/signup/index#/">¡Juega ya!</a>
-        </div>
+  <form class="search-bar">
+    <fieldset id="champions-sort" class="champions-sort">
+      <select id="lol-filter" class="lol-filter">
+        <option value="0">Nombre</option>
+      </select>
+      <select id="lol-sort" name="OS" class="lol-sort">
+        <option value="00">A-Z</option>
+        <option value="01">Z-A</option>
+        <option value="10">DIFICULTAD ASC</option>
+        <option value="11">DIFCULTAD DESC</option>
+      </select>
+    </fieldset>
 
-    </section>
+    <fieldset id="champions-search" class="champions-search">
+      <input type="text" id="search-champion" class="search-champion" name="q" placeholder="Buscar Campeones" autocomplete="on"
+        value="">
+      <button id="search-btn" class="search-btn" type="button">
+        <img src="img/lupita.png" alt="">
+      </button>
+    </fieldset>
 
-    <footer>League of Legends and Riot Games Inc. are trademarks or registered trademarks of Riot Games, Inc.</footer>
+    <fieldset id="champions-filter" class="champions-filter">
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="assassin" value="Assassin">Assassin
+      </label>
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="fighter" value="Fighter">Fighter
+      </label>
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="mage" value="Mage">Mage
+      </label>
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="marksman" value="Marksman">Marksman
+      </label>
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="support" value="Support">Support
+      </label>
+      <label class="checkbox-inline">
+        <input class="filter-champ" type="checkbox" id="tank" value="Tank">Tank
+      </label>
+    </fieldset>
+  </form>
+  
+  <section id="container-list" class="container-list"></section>
+
+  <footer>League of Legends and Riot Games Inc. are trademarks or registered trademarks of Riot Games, Inc.</footer>
+  <script src="./data/lol/lol.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
-<script src="./data/lol/lol.js"></script>
-<script src="data.js"></script>
-<script src="main.js"></script>
 
 </html>
