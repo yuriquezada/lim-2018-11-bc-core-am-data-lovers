@@ -6,13 +6,13 @@ const input1 = [
 ];
 
 const input2 = [
-  {id: 'Ahri', name: 'Ahri', tags: ['Mage', 'Assassin']},
-  {id: 'Braum', name: 'Braum', tags: ['Support', 'Tank']},
-  {id: 'Corki', name: 'Corki', tags: ['Marksman']}
+  {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png', tags: ['Mage', 'Assassin']},
+  {id: 'Braum', name: 'Braum', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Braum.png', tags: ['Support', 'Tank']},
+  {id: 'Corki', name: 'Corki', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Corki.png', tags: ['Marksman']}
 ];
 
 const input3 = [
-  {hp: 514.4, hpperlevel: 80}
+  {stats: {hp: 514.4, hpperlevel: 80}}
 ];
 
 const output1 = [
@@ -27,10 +27,8 @@ const output2 = [
   {id: 'Aatrox', name: 'Aatrox', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png'}
 ];
 const output3 = [
-  {id: 'Ahri', name: 'Ahri', tags: ['Mage', 'Assassin']},
+  {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png', tags: ['Mage', 'Assassin']},
 ];
-
-const output4 = [1954.40];
 
 
 describe('data', () => {
@@ -64,7 +62,7 @@ describe('data', () => {
       expect(typeof window.data.computeStats).toBe('function');
     });
     it('Debería devolver 1954.40', () => {
-      expect(window.data.computeStats(18, input3)).toEqual(output4);
+      expect(window.data.computeStats(18, input3)).toEqual(1954.40);
     });
   });
 });
