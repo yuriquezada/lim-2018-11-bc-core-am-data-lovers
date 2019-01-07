@@ -12,7 +12,7 @@ const input2 = [
 ];
 
 const input3 = [
-  {id: 'Ahri', name: 'Ahri', hp: 514.4, hpperlevel: 80}
+  {hp: 514.4, hpperlevel: 80}
 ];
 
 const output1 = [

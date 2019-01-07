@@ -2,14 +2,17 @@
 
 let slideIndex = 1;
 showSlides(slideIndex);
+let num = [];
 
 function plusSlides(num) {
   showSlides(slideIndex += num);
 }
+plusSlides(num);
 
 function currentSlide(num) {
   showSlides(slideIndex = num);
 }
+currentSlide(num);
 
 function showSlides(num) {
   let i;
