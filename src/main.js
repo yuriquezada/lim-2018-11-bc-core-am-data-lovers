@@ -1,16 +1,17 @@
 // Variables declaradas
 const arrKeys = Object.values(window.LOL.data);
 const sortBy = document.getElementById('lol-sort');
-const filtersByCategories = document.getElementById('lol-filter');
-const inputSearchText = document.getElementById('search-champion');
+
+const inputSearchText = document.getElementById('search-for-champion');
 const btnSearch = document.getElementById('search-btn');
+
 
 // Recorre la data y plasma en el html templates (cards y ventanas modales)
 
 const containerList = document.getElementById('container-list');
 const createTemplateCard = (arrKeys) => {
   let newArrKeys = [];
-  let newGrill = [];
+  let templates = [];
   containerList.value = '';
 
   for (let i = 0; i < arrKeys.length; i++) {
@@ -18,7 +19,7 @@ const createTemplateCard = (arrKeys) => {
   }
 
   for (let i = 0; i < newArrKeys.length; i++) {
-    newGrill.push(`
+    templates.push(`
 
     <div class ="card-link">
         <a class="blog-card" id="${ newArrKeys[i].id }" href="#openmodal${i}">
@@ -66,7 +67,7 @@ const createTemplateCard = (arrKeys) => {
     </section>`
     );
   }
-  containerList.innerHTML = newGrill.join('');
+  containerList.innerHTML = templates.join('');
 };
 createTemplateCard(arrKeys);
 
@@ -94,15 +95,12 @@ filterChamp(tagArray);
 
 const functionListenFilterOrder = () => {
   const listenSortBy = sortBy.options[sortBy.selectedIndex].value;
-  const listenFiltersByCategories = filtersByCategories.options[filtersByCategories.selectedIndex].value;
-  const arrayInputFilter = window.data.searchData(arrKeys, inputSearchText.value, parseInt(listenFiltersByCategories[0]));
-  
+  const arrayInputFilter = window.data.searchData(arrKeys, inputSearchText.value);
   createTemplateCard(window.data.sortData(arrayInputFilter, parseInt(listenSortBy[0]), parseInt(listenSortBy[1])));
 };
 
 const functionMain = () => {
   functionListenFilterOrder();
-  filtersByCategories.addEventListener('change', functionListenFilterOrder);
   sortBy.addEventListener('change', functionListenFilterOrder);
   btnSearch.addEventListener('click', functionListenFilterOrder);
 };

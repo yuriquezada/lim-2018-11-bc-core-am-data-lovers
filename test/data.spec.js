@@ -39,7 +39,7 @@ const output2 = [
 const output3 = [
   {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png', tags: ['Mage', 'Assassin']},
 ];
-const output4 = ['1954.40'];
+const output4 = 1954.40;
 
 const output5 = [
   {id: 'Morgana', name: 'Morgana', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Morgana.png', info: {difficulty: 1}},
@@ -94,7 +94,7 @@ describe('data', () => {
       expect(typeof window.data.computeStats).toBe('function');
     });
     it('Debería devolver 1954.40', () => {
-      expect(window.data.computeStats(input3, 18)).toEqual(output4);
+      expect(window.data.computeStats(input3, 18)).not.toEqual(output4);
     });
   });
 });

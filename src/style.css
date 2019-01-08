@@ -152,6 +152,13 @@ section{
     
 }
 
+.logo-lol{
+    display: flex;
+    justify-content: left;
+    width: 5%;
+    padding-bottom: 0;
+}
+
 .search-bar{
     border: none;
     border-radius: 5px;
@@ -173,7 +180,7 @@ section{
     padding: 2px
 }
 
-.search-champion{
+.search-for-champion{
     width:85%;
     border: 2px solid #896331;
     border-radius: 5px;
@@ -294,20 +301,19 @@ section{
 
 @media (max-width: 900px)
 {
-    .search-champion{
+    .search-for-champion{
         width:80%
     }
 
 }
-
-@media (max-width: 650px)
+for-@media (max-width: 650px)
 {
-    .search-champion{
+    .search-for-champion{
         width:70%
     }
 }
 
-@media (max-width: 700px)
+for-@media (max-width: 700px)
 {
     body{
         padding: 0px
@@ -584,4 +590,4 @@ table, th, td {
     font-size: 20px;
     color: white;
     text-align: justify;
-}¿
+}
