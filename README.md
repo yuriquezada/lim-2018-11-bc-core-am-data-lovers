@@ -28,15 +28,15 @@ necesita saber o ver exactamente; luego construimos una interfaz que le va ayuda
 
 ## Proceso de diseño
 ### **1. Descubrimiento e investigación**
-![Imagen Descubrimiento](/img/Descubrimiento.png "Imagen Descubrimiento")
+![Imagen Descubrimiento](src/img/Descubrimiento.png "Imagen Descubrimiento")
 Los usuarios a los que este proyecto va dirigido son aquellos jugadores de videojuegos (gamers) o personas que se inician en el mundo de “League of Legends” y quieren conocer más de los campeones con los que este MOBA (multiplayer online battle arena) se desarrolla. 
 
 ### **2. Síntesis y Definición**
-![Imagen Definicion](/img/Definicion.png "Imagen Definicion")
+![Imagen Definicion](src/img/Definicion.png "Imagen Definicion")
 
 El usuario entrevistado es un jugador principiante de League of Legends, conoce el juego desde hace mucho tiempo, pero comenzó a jugarlo gracias a la publicidad del último campeonato mundial en el 2018.  Durante la entrevista el usuario hizo hincapié en la cantidad de campeones que se pueden usar en el juego. La diversidad en estos más de 130 personajes hace complicado para un jugador principiante el poder reconocerlos y asociarlos con sus roles, habilidades, dificultad, etc. Si pudiese visualizar la información de los héroes como sus nombres e imágenes, la dificultad de uso de cada uno, los tipos/roles que cumplen (assassin, fighter, mage, marksman, support, tank) e información extra como los puntos de vida y de maná de cada campeón por niveles, está seguro que le facilitaría a desarrollarse mejor en el juego.
 
-![Imagen Arquetipo](/src/img/arquetipoLOL.jpg "Imagen Arquetipo")
+![Imagen Arquetipo](/src/img/arquetipoLOL.JPG "Imagen Arquetipo")
 #### HISTORIAS DE USUARIO
 1.  Yo como usuario quiero poder visualizar a todos los campeones con sus nombres e imágenes para poder diferenciarlos.
 2.	Yo como usuario quiero poder ver la dificultad de cada campeón de League of Legends para poder saber con cuál personaje comenzar a jugar.
@@ -51,7 +51,7 @@ Ya que tenemos la data de los campeones, la idea de producto es una página web 
 ### **4. Prototipado**
 ![Imagen Baja Fidelidad 1](/src/img/Prototipado.png "Imagen Baja Fidelidad 1")
 * #### Prototipo de baja fidelidad
-![Imagen Baja Fidelidad 2](/src/img/prototipo_bf.jpg "Imagen Baja Fidelidad 2")
+![Imagen Baja Fidelidad 2](/src/img/prototipobajafidelidad.JPG "Imagen Baja Fidelidad 2")
 
 * #### Prototipo de alta fidelidad 
 ![Imagen Alta Fidelidad](/src/img/desktopFigma.jpg "Imagen Alta Fidelidad")

@@ -9,39 +9,40 @@ const btnSearch = document.getElementById('search-btn');
 
 const containerList = document.getElementById('container-list');
 const createTemplateCard = (arrKeys) => {
-  let data = [];
+  let newArrKeys = [];
   let newGrill = [];
   containerList.value = '';
 
-  for (let i = 0; i < arrKeys.length; i++)
-    data.push(Object.assign({}, arrKeys[i]));
+  for (let i = 0; i < arrKeys.length; i++) {
+    newArrKeys.push(Object.assign({}, arrKeys[i]));
+  }
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < newArrKeys.length; i++) {
     newGrill.push(`
 
     <div class ="card-link">
-        <a class="blog-card" id="${ data[i].id }" href="#openmodal${i}">
+        <a class="blog-card" id="${ newArrKeys[i].id }" href="#openmodal${i}">
         <div>
-          <img class="post-image " src="${data[i].img}" />
+          <img class="post-image " src="${ newArrKeys[i].img}" />
           <div class="article-details" >
-          <h1 class="post-name" id="${ data[i].id }">${ data[i].name} </h1>
-          <h3 class="post-title" id="${ data[i].id }"> ${ data[i].title}</h3>
-          <h3 class="post-title" id="${ data[i].id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ data[i].info.difficulty}</h3>
+          <h1 class="post-name" id="${ newArrKeys[i].id }">${ newArrKeys[i].name} </h1>
+          <h3 class="post-title" id="${ newArrKeys[i].id }"> ${ newArrKeys[i].title}</h3>
+          <h3 class="post-title" id="${ newArrKeys[i].id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ newArrKeys[i].info.difficulty}</h3>
           </div>                   
         </div>
         </a>
     </div>
           
     <section id="openmodal${i}" class="modal-window">
-      <div class = "modal-content" id="${ data[i].id }">
+      <div class = "modal-content" id="${ newArrKeys[i].id }">
       <a href="#" title="Close" class="modal-close">X</a>
-      <img class="modal-img" src="${ data[i].splash }" />
+      <img class="modal-img" src="${ newArrKeys[i].splash }" />
       <div class="modal-info">
-      <img src="${ data[i].img}"/>
-      <h1>${ data[i].name}</h1>
-      <h3>${ data[i].title}</h3>
-      <p>${ data[i].blurb}</p>
-      <p>${ data[i].tags}</p>
+      <img src="${ newArrKeys[i].img}"/>
+      <h1>${ newArrKeys[i].name}</h1>
+      <h3>${ newArrKeys[i].title}</h3>
+      <p>${ newArrKeys[i].blurb}</p>
+      <p>${ newArrKeys[i].tags}</p>
       <table>
         <tr>
           <th> Health Points (HP)</th>
@@ -52,12 +53,12 @@ const createTemplateCard = (arrKeys) => {
           <th> HP at Lvl. 18</th>
         </tr>
         <tr>
-          <td>${ data[i].stats.hp}</td>
-          <td>${ data[i].stats.hpperlevel}</td>
-          <td>${window.data.computeStats(5, data[i])}</td>
-          <td>${window.data.computeStats(10, data[i])}</td>
-          <td>${window.data.computeStats(15, data[i])}</td>
-          <td>${window.data.computeStats(18, data[i])}</td>
+          <td>${ newArrKeys[i].stats.hp}</td>
+          <td>${ newArrKeys[i].stats.hpperlevel}</td>
+          <td>${window.data.computeStats(newArrKeys[i], 5)}</td>
+          <td>${window.data.computeStats(newArrKeys[i], 10)}</td>
+          <td>${window.data.computeStats(newArrKeys[i], 15)}</td>
+          <td>${window.data.computeStats(newArrKeys[i], 18)}</td>
         </tr>
       </table>
       </div>
@@ -87,6 +88,7 @@ const filterChamp = (arrayTag) => {
   });
 };
 filterChamp(tagArray);
+
 
 // Ordenar y Buscar
 

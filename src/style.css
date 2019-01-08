@@ -332,10 +332,7 @@ section{
         margin: auto;
         padding-top: 2%
     }
-
-    .modal-content{
-        width: 100%;
-    }
+    
 }
 @media (max-width: 400px)
 {
@@ -587,4 +584,4 @@ table, th, td {
     font-size: 20px;
     color: white;
     text-align: justify;
-}
+}¿

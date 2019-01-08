@@ -51,9 +51,10 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
 };
 
 // Función Estadística
-const statFunction = (num, data) => {
+const statFunction = (data, num) => {
   return (parseFloat(data.stats.hp) + (parseFloat(data.stats.hpperlevel) * num)).toFixed(2);
 };
+
 
 // Buscador
 const searchDataFunction = (data, dataSearch) => {
