@@ -26,9 +26,9 @@ const createTemplateCard = (arrKeys) => {
         <div>
           <img class="post-image " src="${ newArrKeys[i].img}" />
           <div class="article-details" >
-          <h1 class="post-name" id="${ newArrKeys[i].id }">${ newArrKeys[i].name} </h1>
-          <h3 class="post-title" id="${ newArrKeys[i].id }"> ${ newArrKeys[i].title}</h3>
-          <h3 class="post-title" id="${ newArrKeys[i].id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ newArrKeys[i].info.difficulty}</h3>
+            <h1 class="post-name" id="${ newArrKeys[i].id }">${ newArrKeys[i].name} </h1>
+            <h3 class="post-title" id="${ newArrKeys[i].id }"> ${ newArrKeys[i].title}</h3>
+            <h3 class="post-title" id="${ newArrKeys[i].id }"> <img class="difficulty-img" src="img/difficulty.jpg"/> ${ newArrKeys[i].info.difficulty}</h3>
           </div>                   
         </div>
         </a>

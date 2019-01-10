@@ -95,4 +95,13 @@ describe('data', () => {
       expect(window.data.computeStats(input3, 18)).not.toEqual(output4);
     });
   });
+  
+  describe('data.searchData', () => {
+    it('Debería ser una función', () => {
+      expect(typeof window.data.searchData).toBe('function');
+    });
+    it('Debería devolver solo el array buscado', () => {
+      expect(window.data.searchData(input2, 'ahri')).toEqual(output3);
+    });
+  });
 });

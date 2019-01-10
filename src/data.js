@@ -31,11 +31,17 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
     newArrayFilter.sort(
       function(ab, cd) {
         if (sortOrder === 0) {
-          if (ab.name > cd.name) return 1;
-          else return -1;
+          if (ab.name > cd.name) {
+            return 1;
+          } else {
+            return -1;
+          }
         } else {
-          if (ab.name < cd.name) return 1;
-          else return -1;
+          if (ab.name < cd.name) {
+            return 1;
+          } else {
+            return -1;
+          }
         }
       }
     );
@@ -51,7 +57,7 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
 };
 
 // Función Estadística
-const statFunction = (data, num) => {  
+const statFunction = (data, num) => {
   const healthPoints = [data.stats.hp];
   const healthPointsPerLevel = [data.stats.hpperlevel];
   return (parseFloat(healthPoints) + (parseFloat(healthPointsPerLevel) * num)).toFixed(2);
@@ -67,9 +73,6 @@ const searchDataFunction = (data, dataSearch) => {
   for (let i = 0; i < data.length; i++)
     dataCopy.push(Object.assign({}, data[i]));
 
-  if (dataSearch.length === 0)
-    return dataCopy;
-
   for (let i = 0; i < dataCopy.length; i++) {
     arraySearch.push(dataCopy[i].name.toLowerCase());
     if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
@@ -82,6 +85,6 @@ const searchDataFunction = (data, dataSearch) => {
 window.data = {
   sortData: sortDataFunction,
   filterData: filterDataFunction,
-  searchData: searchDataFunction,
   computeStats: statFunction,
+  searchData: searchDataFunction,
 };
