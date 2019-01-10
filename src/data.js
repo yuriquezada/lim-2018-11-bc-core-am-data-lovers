@@ -51,7 +51,7 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
 };
 
 // Función Estadística
-const statFunction = (data, num) => {
+const statFunction = (data, num) => {  
   const healthPoints = [data.stats.hp];
   const healthPointsPerLevel = [data.stats.hpperlevel];
   return (parseFloat(healthPoints) + (parseFloat(healthPointsPerLevel) * num)).toFixed(2);

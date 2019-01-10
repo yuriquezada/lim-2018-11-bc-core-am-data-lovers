@@ -13,9 +13,7 @@ const input2 = [
 
 const input2Choice = ['Mage'];
 
-const input3 = [
-  {id: 'Ahri', key: '103', name: 'Ahri', stats: {hp: 514.4, hpperlevel: 80, mp: 334}}
-];
+const input3 = {id: 'Ahri', key: '103', name: 'Ahri', stats: {hp: 514.4, hpperlevel: 80, mp: 334}};
 
 const input4 = [
   {id: 'Ashe', name: 'Ashe', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ashe.png', info: {difficulty: 4}},
