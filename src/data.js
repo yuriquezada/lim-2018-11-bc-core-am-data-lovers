@@ -33,14 +33,10 @@ const sortDataFunction = (data, sortBy, sortOrder) => {
         if (sortOrder === 0) {
           if (ab.name > cd.name) {
             return 1;
-          } else {
-            return -1;
           }
         } else {
           if (ab.name < cd.name) {
             return 1;
-          } else {
-            return -1;
           }
         }
       }
