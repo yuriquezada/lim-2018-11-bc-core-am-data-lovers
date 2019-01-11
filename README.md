@@ -55,5 +55,5 @@ Ya que tenemos la data de los campeones, la idea de producto es una página web 
 
 * #### Prototipo de alta fidelidad 
 ![Sin Título](/src/img/PrototipoAFcelular.png)
-
+![Sin Título](/src/img/PrototipoAFfuncionabilidad.png)
 
