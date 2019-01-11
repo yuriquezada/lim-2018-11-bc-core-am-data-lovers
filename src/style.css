@@ -27,7 +27,7 @@
 }
 
 .menu-bar li{
-    width: 500px;
+    width: 800px;
 }
 
 .menu-bar a{
@@ -236,7 +236,7 @@ section{
     align-content: center;
     background-color: #07090a;
     color: #896331;
-    opacity: 0.9;
+    opacity: 1;
     border: 3px solid #937341;
     border-radius: 4%;
     font-family: 'ZCOOL KuaiLe';
