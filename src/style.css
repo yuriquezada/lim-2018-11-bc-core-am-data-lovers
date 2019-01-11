@@ -14,7 +14,7 @@
     margin: 0;
 }
 
-/* Barra de menu */
+ /* Barra de menu */
 .menu-bar{
     display: flex;
     flex-wrap: nowrap;
@@ -23,40 +23,31 @@
     background-color: #07090a;
     list-style-type: none;
     overflow: hidden;
+    font-family: aGaramondPro;
 }
 
-.menu-option{
-    width: 33.33%;
-    height: auto;
-    float: left;
-}
-
-.menu-option a{
-    display: block;
+.menu-bar li{
+    width: 500px;
 }
 
 .menu-bar a{
-    width: 100%;
-    padding: 2%;
+    display: block;
+
     color: white;
-    font-family: aGaramondPro;
     font-size: 25px;
     text-decoration: none;
-    text-align: center;
-    
+    text-align: center; 
+    padding: 10px;  
 }
+
 .menu-bar a:hover:not(.active) {
     background-color: #162228;
-  }
+  } 
   
 .active{
     background-color: #896331;
 }
-.active:hover {
-    background-color: #937341;
-    color:black;
-    font-weight: bold;
-}
+
 .explanation-box {
     background-color: rgba(255, 255, 255, 0.6);
     width: 46%;
@@ -173,16 +164,9 @@ section{
     justify-content: center;
     border: none
 }
-.lol-sort-option{
-    border:2px solid #896331;
+.champions-sort label{
     font-family: 'ZCOOL KuaiLe';
-    font-size: 12px;
-    padding: 2px;
-    width: 100px;
-    height: 20px;
-    overflow: hidden;
-    display:flex;
-    align-content: flex-start;
+    font-size: 15px;
 }
 .lol-sort{
     border: 2px solid #896331;
@@ -316,14 +300,14 @@ section{
     }
 
 }
-for-@media (max-width: 650px)
+@media (max-width: 650px)
 {
     .search-for-champion{
         width:70%
     }
 }
 
-for-@media (max-width: 700px)
+@media (max-width: 700px)
 {
     body{
         padding: 0px
