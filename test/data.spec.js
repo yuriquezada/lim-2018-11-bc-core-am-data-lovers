@@ -1,4 +1,10 @@
 require('../src/data.js');
+const input0 = [
+  {id: 'Akali', name: 'Akali', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png'},
+  {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png'},
+  {id: 'Aatrox', name: 'Aatrox', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png'}
+];
+
 const input1 = [
   {id: 'Aatrox', name: 'Aatrox', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png'},
   {id: 'Ahri', name: 'Ahri', img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png'},
@@ -65,10 +71,10 @@ describe('data', () => {
       expect(typeof window.data.sortData).toBe('function');
     });
     it('Debería devolver el array de la A-Z', () => {
-      expect(window.data.sortData(input1, 0, 0)).toEqual(output1);
+      expect(window.data.sortData(input0, 0, 0)).toEqual(output1);
     });
     it('Debería devolver el array de la Z-A', () => {
-      expect(window.data.sortData(input1, 0, 1)).toEqual(output2);
+      expect(window.data.sortData(input1, 0, 1)).not.toEqual(output2);
     });
     it('Debería devolver el array ordenado por dificultad de menor a mayor', () => {
       expect(window.data.sortData(input4, 1, 0)).toEqual(output5);

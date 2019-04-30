@@ -1,4 +1,5 @@
 // Función para Filtrar
+// Se comparan los valores que entran como tags para filtrar
 const filterDataFunction = (data, choices) => {
   const arrKeysFilter = data.filter(champion => {
     const arrTrueFalse = [];
@@ -19,37 +20,40 @@ const filterDataFunction = (data, choices) => {
   return arrKeysFilter;
 };
 
-// Función para Ordenar
+// Función para Ordenar Alfabéticamente y por Dificultad
 const sortDataFunction = (data, sortBy, sortOrder) => {
-  let newArrayFilter = [];
+  let newArrayToSort = [];
+  // console.log(newArrayToSort);
 
-  for (let i = 0; i < data.length; i++)
-    newArrayFilter.push(Object.assign({}, data[i]));
+  for (let i = 0; i < data.length; i++) {
+    newArrayToSort.push(Object.assign({}, data[i]));
+  }
 
   if (sortBy === 0) {
-    // Ordenar por Alfabéticamente
-    newArrayFilter.sort(
-      function(ab, cd) {
+    // Ordena Alfabéticamente
+    newArrayToSort.sort(
+      (championAsc, championDsc) => {
         if (sortOrder === 0) {
-          if (ab.name > cd.name) {
+          if (championAsc.name > championDsc.name) {
             return 1;
-          }
+          } 
         } else {
-          if (ab.name < cd.name) {
-            return 1;
-          }
-        }
+          return -1;
+        } 
       }
     );
   } else {
     // Ordenar por Dificultad
-    newArrayFilter.sort(
-      function(ab, cd) {
-        if (sortOrder === 0) return ab.info.difficulty - cd.info.difficulty;
-        else return cd.info.difficulty - ab.info.difficulty;
+    newArrayToSort.sort(
+      (championAsc, championDsc) => {
+        if (sortOrder === 0) {
+          return championAsc.info.difficulty - championDsc.info.difficulty;
+        } else {
+          return championDsc.info.difficulty - championAsc.info.difficulty;
+        }
       });
   }
-  return newArrayFilter;
+  return newArrayToSort;
 };
 
 // Función Estadística
@@ -62,8 +66,8 @@ const statFunction = (data, num) => {
 
 // Buscador
 const searchDataFunction = (data, dataSearch) => {
-  let dataCopy = [];
-  let arraySearch = [];
+  let dataCopy = []; // Copia de la data
+  let arraySearch = []; // Data en minúsculas
   let newArraySearch = [];
 
   for (let i = 0; i < data.length; i++)
@@ -71,8 +75,9 @@ const searchDataFunction = (data, dataSearch) => {
 
   for (let i = 0; i < dataCopy.length; i++) {
     arraySearch.push(dataCopy[i].name.toLowerCase());
-    if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1)
+    if (arraySearch[i].indexOf(dataSearch.toLowerCase()) !== -1) {
       newArraySearch.push(dataCopy[i]);
+    }  
   }
   return newArraySearch;
 };
